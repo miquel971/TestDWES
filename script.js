@@ -1,6 +1,4 @@
-
- const archivosUF = ["preguntas.json"];
-
+const archivosUF = ["preguntas.json"];
 
 let bancoPreguntas = [];
 let preguntasTest = [];
@@ -15,16 +13,12 @@ const pantallaInicio = document.getElementById("pantallaInicio");
 const pantallaQuiz = document.getElementById("pantallaQuiz");
 const pantallaResultado = document.getElementById("pantallaResultado");
 
-const selectorUF = document.getElementById("selectorUF");
 const estadoCarga = document.getElementById("estadoCarga");
 const btnEmpezar = document.getElementById("btnEmpezar");
-const btnSiguiente = document.getElementById("btnSiguiente");
-const btnTerminar = document.getElementById("btnTerminar");
 const btnNuevo = document.getElementById("btnNuevo");
 const btnRepetirFalladas = document.getElementById("btnRepetirFalladas");
 
 const contador = document.getElementById("contador");
-const ufActual = document.getElementById("ufActual");
 const pregunta = document.getElementById("pregunta");
 const opciones = document.getElementById("opciones");
 const feedback = document.getElementById("feedback");
@@ -34,69 +28,33 @@ const falladasDiv = document.getElementById("falladas");
 iniciar();
 
 async function iniciar() {
-  crearSelectorUF();
   await cargarPreguntas();
-}
-
-function crearSelectorUF() {
-  archivosUF.forEach((archivo, index) => {
-    const uf = `UF${index + 1}`;
-
-    const label = document.createElement("label");
-    label.innerHTML = `<input type="checkbox" value="${uf}" checked> ${uf}`;
-
-    selectorUF.appendChild(label);
-  });
 }
 
 async function cargarPreguntas() {
   try {
-    const respuestas = await Promise.all(
-      archivosUF.map(archivo =>
-        fetch(archivo).then(res => {
-          if (!res.ok) {
-            throw new Error(`No se pudo cargar ${archivo}`);
-          }
-          return res.json();
-        })
-      )
-    );
-
-    bancoPreguntas = respuestas.flat();
+    const res = await fetch("preguntas.json");
+    bancoPreguntas = await res.json();
 
     estadoCarga.textContent = `Cargadas ${bancoPreguntas.length} preguntas.`;
     btnEmpezar.disabled = false;
-
   } catch (error) {
-    estadoCarga.textContent =
-      "Error cargando preguntas. Abre esto desde Live Server o servidor local.";
-    btnEmpezar.disabled = true;
+    estadoCarga.textContent = "Error cargando preguntas";
     console.error(error);
   }
 }
 
 btnEmpezar.addEventListener("click", empezarTest);
-btnSiguiente.addEventListener("click", siguientePregunta);
-btnTerminar.addEventListener("click", terminarTest);
 btnNuevo.addEventListener("click", () => mostrarPantalla("inicio"));
 btnRepetirFalladas.addEventListener("click", repetirFalladas);
 
 function empezarTest() {
-  const filtradas = bancoPreguntas;
-
   const numPreguntas = parseInt(
     document.getElementById("numPreguntas").value,
     10
   );
 
-  const filtradas = bancoPreguntas.filter(p =>
-    ufsSeleccionadas.includes(p.uf)
-  );
-
-  if (filtradas.length === 0) {
-    alert("Selecciona al menos una UF.");
-    return;
-  }
+  const filtradas = bancoPreguntas;
 
   preguntasTest = mezclar(filtradas).slice(
     0,
@@ -110,7 +68,7 @@ function empezarTest() {
 
 function repetirFalladas() {
   if (falladas.length === 0) {
-    alert("No hay preguntas falladas para repetir.");
+    alert("No hay falladas");
     return;
   }
 
@@ -136,13 +94,11 @@ function reiniciarEstado(limpiarFalladas = true) {
 function pintarPregunta() {
   respondida = false;
   feedback.textContent = "";
-  btnSiguiente.classList.add("oculto");
 
   const p = preguntasTest[preguntaActual];
   const opcionesMezcladas = mezclarOpciones(p);
 
   contador.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
-  ufActual.textContent = p.uf;
   pregunta.textContent = p.pregunta;
   opciones.innerHTML = "";
 
@@ -166,18 +122,12 @@ function responder(boton, esCorrecta, preguntaOriginal) {
   respondida = true;
 
   const botones = opciones.querySelectorAll(".respuesta");
-
-  botones.forEach(btn => {
-    btn.disabled = true;
-    setTimeout(() => {
-  siguientePregunta();
-}, 200);
-  });
+  botones.forEach(btn => (btn.disabled = true));
 
   if (esCorrecta) {
     aciertos++;
     boton.classList.add("correcta");
-    feedback.textContent = "Correcta.";
+    feedback.textContent = "Correcta";
   } else {
     fallos++;
     falladas.push(preguntaOriginal);
@@ -186,17 +136,19 @@ function responder(boton, esCorrecta, preguntaOriginal) {
     feedback.textContent = `Incorrecta. ${preguntaOriginal.explicacion}`;
 
     botones.forEach(btn => {
-      const textoBoton = btn.textContent.replace(/^.\)\s/, "");
-      const respuestaCorrecta =
+      const texto = btn.textContent.replace(/^.\)\s/, "");
+      const correcta =
         preguntaOriginal.opciones[preguntaOriginal.correcta];
 
-      if (textoBoton === respuestaCorrecta) {
+      if (texto === correcta) {
         btn.classList.add("correcta");
       }
     });
   }
 
-  btnSiguiente.classList.remove("oculto");
+  setTimeout(() => {
+    siguientePregunta();
+  }, 600);
 }
 
 function siguientePregunta() {
@@ -214,23 +166,16 @@ function terminarTest() {
   blancas = total - aciertos - fallos;
 
   const valorAcierto = 4 / total;
-
-  const penalizacion = document.getElementById("penalizacion").value;
-  const valorFallo =
-    penalizacion === "tercio" ? valorAcierto / 3 : 0;
+  const valorFallo = valorAcierto / 3;
 
   let nota = aciertos * valorAcierto - fallos * valorFallo;
-
-  if (nota < 0) {
-    nota = 0;
-  }
+  if (nota < 0) nota = 0;
 
   resumen.innerHTML = `
     <div><strong>Aciertos:</strong> ${aciertos}</div>
     <div><strong>Fallos:</strong> ${fallos}</div>
     <div><strong>En blanco:</strong> ${blancas}</div>
     <div><strong>Nota sobre 4:</strong> ${nota.toFixed(2)}</div>
-    <div><strong>Fórmula:</strong> aciertos × ${valorAcierto.toFixed(3)} - fallos × ${valorFallo.toFixed(3)}</div>
   `;
 
   pintarFalladas();
@@ -241,7 +186,7 @@ function pintarFalladas() {
   falladasDiv.innerHTML = "";
 
   if (falladas.length === 0) {
-    falladasDiv.innerHTML = "<p>No has fallado ninguna.</p>";
+    falladasDiv.innerHTML = "<p>Todo correcto</p>";
     return;
   }
 
@@ -251,8 +196,8 @@ function pintarFalladas() {
     div.className = "fallada";
 
     div.innerHTML = `
-      <strong>${p.uf} - ${p.pregunta}</strong>
-      <div>Respuesta correcta: ${p.opciones[p.correcta]}</div>
+      <strong>${p.pregunta}</strong>
+      <div>Correcta: ${p.opciones[p.correcta]}</div>
       <div>${p.explicacion}</div>
     `;
 
@@ -263,7 +208,7 @@ function pintarFalladas() {
 function mezclarOpciones(pregunta) {
   return mezclar(
     pregunta.opciones.map((texto, index) => ({
-      texto: texto,
+      texto,
       correcta: index === pregunta.correcta
     }))
   );
@@ -274,7 +219,6 @@ function mezclar(array) {
 
   for (let i = copia.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-
     [copia[i], copia[j]] = [copia[j], copia[i]];
   }
 
@@ -286,15 +230,7 @@ function mostrarPantalla(nombre) {
   pantallaQuiz.classList.add("oculto");
   pantallaResultado.classList.add("oculto");
 
-  if (nombre === "inicio") {
-    pantallaInicio.classList.remove("oculto");
-  }
-
-  if (nombre === "quiz") {
-    pantallaQuiz.classList.remove("oculto");
-  }
-
-  if (nombre === "resultado") {
-    pantallaResultado.classList.remove("oculto");
-  }
+  if (nombre === "inicio") pantallaInicio.classList.remove("oculto");
+  if (nombre === "quiz") pantallaQuiz.classList.remove("oculto");
+  if (nombre === "resultado") pantallaResultado.classList.remove("oculto");
 }
