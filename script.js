@@ -1,6 +1,6 @@
 const archivosUF = ["./preguntas.json"];
 
-let bancoPreguntas = [];
+let bancoRestante = [];
 let preguntasTest = [];
 let preguntaActual = 0;
 let aciertos = 0;
@@ -35,16 +35,21 @@ async function iniciar() {
 
 async function cargarPreguntas() {
   try {
-    const res = await fetch(archivosUF[0]);
+    const res = await fetch("./preguntas.json");
+    const data = await res.json();
 
-    if (!res.ok) {
-      throw new Error("No se pudo cargar preguntas.json");
+    const guardado = localStorage.getItem("bancoRestante");
+
+    if (guardado) {
+      bancoRestante = JSON.parse(guardado);
+    } else {
+      bancoRestante = data;
+      localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
     }
 
-    bancoPreguntas = await res.json();
-
-    estadoCarga.textContent = `Cargadas ${bancoPreguntas.length} preguntas.`;
+    estadoCarga.textContent = `Quedan ${bancoRestante.length} preguntas.`;
     btnEmpezar.disabled = false;
+
   } catch (error) {
     estadoCarga.textContent = "Error cargando preguntas.";
     console.error(error);
@@ -58,9 +63,14 @@ btnRepetirFalladas.addEventListener("click", repetirFalladas);
 function empezarTest() {
   const numPreguntas = parseInt(document.getElementById("numPreguntas").value, 10);
 
-  preguntasTest = mezclar(bancoPreguntas).slice(
+  if (bancoRestante.length === 0) {
+    alert("Ya has hecho todas las preguntas 🔥");
+    return;
+  }
+
+  preguntasTest = mezclar(bancoRestante).slice(
     0,
-    Math.min(numPreguntas, bancoPreguntas.length)
+    Math.min(numPreguntas, bancoRestante.length)
   );
 
   reiniciarEstado();
@@ -70,11 +80,12 @@ function empezarTest() {
 
 function repetirFalladas() {
   if (falladas.length === 0) {
-    alert("No hay preguntas falladas.");
+    alert("No hay falladas");
     return;
   }
 
   preguntasTest = mezclar(falladas);
+
   reiniciarEstado(false);
   mostrarPantalla("quiz");
   pintarPregunta();
@@ -129,11 +140,12 @@ function responder(boton, esCorrecta, preguntaOriginal) {
   if (esCorrecta) {
     aciertos++;
     boton.classList.add("correcta");
-    feedback.textContent = "Correcta.";
+    feedback.textContent = "Correcta";
   } else {
     fallos++;
     falladas.push(preguntaOriginal);
     boton.classList.add("incorrecta");
+
     feedback.textContent = `Incorrecta. ${preguntaOriginal.explicacion}`;
 
     botones.forEach(btn => {
@@ -167,8 +179,15 @@ function terminarTest() {
   const valorFallo = valorAcierto / 3;
 
   let nota = aciertos * valorAcierto - fallos * valorFallo;
-
   if (nota < 0) nota = 0;
+
+  // 🔥 eliminar preguntas usadas
+  const idsUsadas = preguntasTest.map(p => p.id);
+  bancoRestante = bancoRestante.filter(p => !idsUsadas.includes(p.id));
+
+  localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+
+  estadoCarga.textContent = `Quedan ${bancoRestante.length} preguntas.`;
 
   resumen.innerHTML = `
     <div><strong>Aciertos:</strong> ${aciertos}</div>
@@ -185,7 +204,7 @@ function pintarFalladas() {
   falladasDiv.innerHTML = "";
 
   if (falladas.length === 0) {
-    falladasDiv.innerHTML = "<p>No has fallado ninguna.</p>";
+    falladasDiv.innerHTML = "<p>Todo correcto 🔥</p>";
     return;
   }
 
@@ -195,7 +214,7 @@ function pintarFalladas() {
     div.className = "fallada";
 
     div.innerHTML = `
-      <strong>${p.uf} - ${p.pregunta}</strong>
+      <strong>${p.pregunta}</strong>
       <div>Correcta: ${p.opciones[p.correcta]}</div>
       <div>${p.explicacion}</div>
     `;
@@ -232,4 +251,10 @@ function mostrarPantalla(nombre) {
   if (nombre === "inicio") pantallaInicio.classList.remove("oculto");
   if (nombre === "quiz") pantallaQuiz.classList.remove("oculto");
   if (nombre === "resultado") pantallaResultado.classList.remove("oculto");
+}
+
+// 🔥 RESET opcional
+function resetearBanco() {
+  localStorage.removeItem("bancoRestante");
+  location.reload();
 }
