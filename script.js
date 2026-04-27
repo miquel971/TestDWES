@@ -1,4 +1,4 @@
-const archivosUF = ["preguntas.json"];
+const archivosUF = ["./preguntas.json"];
 
 let bancoPreguntas = [];
 let preguntasTest = [];
@@ -25,6 +25,8 @@ const feedback = document.getElementById("feedback");
 const resumen = document.getElementById("resumen");
 const falladasDiv = document.getElementById("falladas");
 
+btnEmpezar.disabled = true;
+
 iniciar();
 
 async function iniciar() {
@@ -33,13 +35,18 @@ async function iniciar() {
 
 async function cargarPreguntas() {
   try {
-    const res = await fetch("preguntas.json");
+    const res = await fetch(archivosUF[0]);
+
+    if (!res.ok) {
+      throw new Error("No se pudo cargar preguntas.json");
+    }
+
     bancoPreguntas = await res.json();
 
     estadoCarga.textContent = `Cargadas ${bancoPreguntas.length} preguntas.`;
     btnEmpezar.disabled = false;
   } catch (error) {
-    estadoCarga.textContent = "Error cargando preguntas";
+    estadoCarga.textContent = "Error cargando preguntas.";
     console.error(error);
   }
 }
@@ -49,16 +56,11 @@ btnNuevo.addEventListener("click", () => mostrarPantalla("inicio"));
 btnRepetirFalladas.addEventListener("click", repetirFalladas);
 
 function empezarTest() {
-  const numPreguntas = parseInt(
-    document.getElementById("numPreguntas").value,
-    10
-  );
+  const numPreguntas = parseInt(document.getElementById("numPreguntas").value, 10);
 
-  const filtradas = bancoPreguntas;
-
-  preguntasTest = mezclar(filtradas).slice(
+  preguntasTest = mezclar(bancoPreguntas).slice(
     0,
-    Math.min(numPreguntas, filtradas.length)
+    Math.min(numPreguntas, bancoPreguntas.length)
   );
 
   reiniciarEstado();
@@ -68,12 +70,11 @@ function empezarTest() {
 
 function repetirFalladas() {
   if (falladas.length === 0) {
-    alert("No hay falladas");
+    alert("No hay preguntas falladas.");
     return;
   }
 
   preguntasTest = mezclar(falladas);
-
   reiniciarEstado(false);
   mostrarPantalla("quiz");
   pintarPregunta();
@@ -96,11 +97,12 @@ function pintarPregunta() {
   feedback.textContent = "";
 
   const p = preguntasTest[preguntaActual];
-  const opcionesMezcladas = mezclarOpciones(p);
 
   contador.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
   pregunta.textContent = p.pregunta;
   opciones.innerHTML = "";
+
+  const opcionesMezcladas = mezclarOpciones(p);
 
   opcionesMezcladas.forEach((opcion, index) => {
     const btn = document.createElement("button");
@@ -108,9 +110,9 @@ function pintarPregunta() {
     btn.className = "respuesta";
     btn.textContent = `${String.fromCharCode(97 + index)}) ${opcion.texto}`;
 
-    btn.addEventListener("click", () =>
-      responder(btn, opcion.correcta, p)
-    );
+    btn.addEventListener("click", () => {
+      responder(btn, opcion.correcta, p);
+    });
 
     opciones.appendChild(btn);
   });
@@ -122,23 +124,21 @@ function responder(boton, esCorrecta, preguntaOriginal) {
   respondida = true;
 
   const botones = opciones.querySelectorAll(".respuesta");
-  botones.forEach(btn => (btn.disabled = true));
+  botones.forEach(btn => btn.disabled = true);
 
   if (esCorrecta) {
     aciertos++;
     boton.classList.add("correcta");
-    feedback.textContent = "Correcta";
+    feedback.textContent = "Correcta.";
   } else {
     fallos++;
     falladas.push(preguntaOriginal);
     boton.classList.add("incorrecta");
-
     feedback.textContent = `Incorrecta. ${preguntaOriginal.explicacion}`;
 
     botones.forEach(btn => {
       const texto = btn.textContent.replace(/^.\)\s/, "");
-      const correcta =
-        preguntaOriginal.opciones[preguntaOriginal.correcta];
+      const correcta = preguntaOriginal.opciones[preguntaOriginal.correcta];
 
       if (texto === correcta) {
         btn.classList.add("correcta");
@@ -146,9 +146,7 @@ function responder(boton, esCorrecta, preguntaOriginal) {
     });
   }
 
-  setTimeout(() => {
-    siguientePregunta();
-  }, 600);
+  setTimeout(siguientePregunta, 600);
 }
 
 function siguientePregunta() {
@@ -169,6 +167,7 @@ function terminarTest() {
   const valorFallo = valorAcierto / 3;
 
   let nota = aciertos * valorAcierto - fallos * valorFallo;
+
   if (nota < 0) nota = 0;
 
   resumen.innerHTML = `
@@ -186,7 +185,7 @@ function pintarFalladas() {
   falladasDiv.innerHTML = "";
 
   if (falladas.length === 0) {
-    falladasDiv.innerHTML = "<p>Todo correcto</p>";
+    falladasDiv.innerHTML = "<p>No has fallado ninguna.</p>";
     return;
   }
 
@@ -196,7 +195,7 @@ function pintarFalladas() {
     div.className = "fallada";
 
     div.innerHTML = `
-      <strong>${p.pregunta}</strong>
+      <strong>${p.uf} - ${p.pregunta}</strong>
       <div>Correcta: ${p.opciones[p.correcta]}</div>
       <div>${p.explicacion}</div>
     `;
