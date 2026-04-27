@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz DWES</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- INICIO -->
+    <section class="card inicio" id="pantallaInicio">
+      <h1>Quiz DWES</h1>
+      <p class="subtitulo">
+        Test de 20 preguntas mezcladas por UF. Penalización: 3 fallos quitan 1 acierto.
+      </p>
+
+      <div class="opciones">
+        <label>
+          Nº preguntas:
+          <input type="number" id="numPreguntas" min="5" max="50" value="20">
+        </label>
+
+        <label>
+          Penalización:
+          <select id="penalizacion">
+            <option value="tercio" selected>3 fallos quitan 1 acierto</option>
+            <option value="ninguna">Sin penalización</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <legend>UF</legend>
+          <div class="checks" id="selectorUF"></div>
+        </fieldset>
+      </div>
+
+      <button id="btnEmpezar">Empezar</button>
+      <p id="estadoCarga" class="estado">Cargando preguntas...</p>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="card quiz oculto" id="pantallaQuiz">
+      <div class="barra">
+        <span id="contador"></span>
+        <span id="ufActual"></span>
+      </div>
+
+      <h2 id="pregunta"></h2>
+
+      <div id="opciones" class="respuestas"></div>
+
+      <div class="acciones">
+        <button id="btnSiguiente" class="oculto">Siguiente</button>
+        <button id="btnTerminar" class="secundario">Terminar</button>
+      </div>
+
+      <p id="feedback" class="feedback"></p>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="card resultado oculto" id="pantallaResultado">
+      <h2>Resultado</h2>
+
+      <div id="resumen"></div>
+
+      <div class="acciones">
+        <button id="btnRepetirFalladas">Repetir falladas</button>
+        <button id="btnNuevo">Nuevo test</button>
+      </div>
+
+      <h3>Falladas</h3>
+      <div id="falladas"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

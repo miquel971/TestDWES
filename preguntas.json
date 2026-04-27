@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "UF1-001",
+    "uf": "UF1",
+    "pregunta": "¿Qué caracteriza principalmente al modelo cliente-servidor?",
+    "opciones": [
+      "El servidor siempre ejecuta el código HTML del cliente",
+      "El cliente solicita recursos y el servidor responde",
+      "La base de datos se ejecuta siempre en el navegador"
+    ],
+    "correcta": 1,
+    "explicacion": "En el modelo cliente-servidor, el cliente realiza peticiones y el servidor devuelve respuestas."
+  },
+  {
+    "id": "UF1-002",
+    "uf": "UF1",
+    "pregunta": "¿Qué protocolo se utiliza normalmente para servir páginas web?",
+    "opciones": [
+      "FTP",
+      "SMTP",
+      "HTTP o HTTPS"
+    ],
+    "correcta": 2,
+    "explicacion": "HTTP y HTTPS son los protocolos habituales para la comunicación web."
+  },
+  {
+    "id": "UF1-003",
+    "uf": "UF1",
+    "pregunta": "¿Cuál es el puerto habitual de HTTP?",
+    "opciones": [
+      "443",
+      "3306",
+      "80"
+    ],
+    "correcta": 2,
+    "explicacion": "HTTP usa normalmente el puerto 80."
+  },
+  {
+    "id": "UF1-004",
+    "uf": "UF1",
+    "pregunta": "¿Cuál es el puerto habitual de HTTPS?",
+    "opciones": [
+      "80",
+      "21",
+      "443"
+    ],
+    "correcta": 2,
+    "explicacion": "HTTPS usa normalmente el puerto 443."
+  },
+  {
+    "id": "UF1-005",
+    "uf": "UF1",
+    "pregunta": "¿Qué servicio traduce un nombre de dominio a una dirección IP?",
+    "opciones": [
+      "FTP",
+      "DNS",
+      "SMTP"
+    ],
+    "correcta": 1,
+    "explicacion": "DNS resuelve dominios y los convierte en direcciones IP."
+  },
+  {
+    "id": "UF1-006",
+    "uf": "UF1",
+    "pregunta": "¿Qué puerto se asocia normalmente a MySQL o MariaDB?",
+    "opciones": [
+      "3306",
+      "27017",
+      "8080"
+    ],
+    "correcta": 0,
+    "explicacion": "MySQL y MariaDB usan habitualmente el puerto 3306."
+  },
+  {
+    "id": "UF1-007",
+    "uf": "UF1",
+    "pregunta": "¿Qué puerto se asocia normalmente a MongoDB?",
+    "opciones": [
+      "3306",
+      "443",
+      "27017"
+    ],
+    "correcta": 2,
+    "explicacion": "MongoDB usa por defecto el puerto 27017."
+  },
+  {
+    "id": "UF1-008",
+    "uf": "UF1",
+    "pregunta": "¿Qué significa que HTTP sea un protocolo sin estado?",
+    "opciones": [
+      "Que no puede enviar datos al servidor",
+      "Que solo funciona con formularios GET",
+      "Que no conserva automáticamente información entre peticiones"
+    ],
+    "correcta": 2,
+    "explicacion": "HTTP no recuerda por sí solo peticiones anteriores; por eso se usan sesiones, cookies o tokens."
+  },
+  {
+    "id": "UF1-009",
+    "uf": "UF1",
+    "pregunta": "¿Qué es localhost?",
+    "opciones": [
+      "Un dominio público obligatorio",
+      "Una base de datos local",
+      "El propio equipo actuando como servidor"
+    ],
+    "correcta": 2,
+    "explicacion": "localhost hace referencia al propio ordenador."
+  },
+  {
+    "id": "UF1-010",
+    "uf": "UF1",
+    "pregunta": "En XAMPP, ¿qué componente actúa como servidor web?",
+    "opciones": [
+      "phpMyAdmin",
+      "Apache",
+      "MariaDB"
+    ],
+    "correcta": 1,
+    "explicacion": "Apache es el servidor web incluido en XAMPP."
+  },
+  {
+    "id": "UF1-011",
+    "uf": "UF1",
+    "pregunta": "¿Para qué sirve phpMyAdmin?",
+    "opciones": [
+      "Para administrar bases de datos MySQL/MariaDB desde el navegador",
+      "Para ejecutar código JavaScript",
+      "Para configurar hojas CSS"
+    ],
+    "correcta": 0,
+    "explicacion": "phpMyAdmin permite gestionar bases de datos desde una interfaz web."
+  },
+  {
+    "id": "UF1-012",
+    "uf": "UF1",
+    "pregunta": "¿Qué archivo se utiliza normalmente para configurar PHP?",
+    "opciones": [
+      "web.php",
+      "index.html",
+      "php.ini"
+    ],
+    "correcta": 2,
+    "explicacion": "php.ini contiene directivas de configuración de PHP."
+  },
+  {
+    "id": "UF1-013",
+    "uf": "UF1",
+    "pregunta": "¿Cuál de estas tecnologías pertenece principalmente al front-end?",
+    "opciones": [
+      "CSS",
+      "PDO",
+      "MySQL"
+    ],
+    "correcta": 0,
+    "explicacion": "CSS forma parte de la capa visual del cliente."
+  },
+  {
+    "id": "UF1-014",
+    "uf": "UF1",
+    "pregunta": "¿Cuál de estas tecnologías pertenece principalmente al back-end?",
+    "opciones": [
+      "HTML",
+      "CSS",
+      "PHP"
+    ],
+    "correcta": 2,
+    "explicacion": "PHP se ejecuta en el servidor."
+  },
+  {
+    "id": "UF1-015",
+    "uf": "UF1",
+    "pregunta": "¿Qué hace el navegador cuando accede a una URL?",
+    "opciones": [
+      "Envía una petición al servidor y espera una respuesta",
+      "Compila directamente el código PHP",
+      "Crea automáticamente una base de datos"
+    ],
+    "correcta": 0,
+    "explicacion": "El navegador actúa como cliente y solicita recursos al servidor."
+  },
+  {
+    "id": "UF1-016",
+    "uf": "UF1",
+    "pregunta": "¿Qué diferencia básica hay entre una web estática y una dinámica?",
+    "opciones": [
+      "La dinámica puede generar contenido según datos o lógica del servidor",
+      "La dinámica no necesita servidor",
+      "La estática siempre usa bases de datos"
+    ],
+    "correcta": 0,
+    "explicacion": "Una web dinámica puede cambiar el contenido usando lógica de servidor y datos."
+  },
+  {
+    "id": "UF1-017",
+    "uf": "UF1",
+    "pregunta": "¿Qué lenguaje se ejecuta normalmente en el servidor en este módulo?",
+    "opciones": [
+      "CSS",
+      "HTML",
+      "PHP"
+    ],
+    "correcta": 2,
+    "explicacion": "DWES trabaja principalmente con PHP como lenguaje de servidor."
+  },
+  {
+    "id": "UF1-018",
+    "uf": "UF1",
+    "pregunta": "¿Qué significa una arquitectura en tres capas?",
+    "opciones": [
+      "Que solo puede hacerse con Laravel",
+      "Que separa presentación, lógica y datos",
+      "Que siempre usa tres servidores físicos"
+    ],
+    "correcta": 1,
+    "explicacion": "La arquitectura en tres capas separa presentación, lógica de negocio y acceso a datos."
+  },
+  {
+    "id": "UF1-019",
+    "uf": "UF1",
+    "pregunta": "¿Cuál es la función principal del servidor web?",
+    "opciones": [
+      "Crear usuarios de MySQL",
+      "Diseñar formularios automáticamente",
+      "Recibir peticiones HTTP y devolver respuestas"
+    ],
+    "correcta": 2,
+    "explicacion": "El servidor web procesa peticiones y devuelve recursos o respuestas."
+  },
+  {
+    "id": "UF1-020",
+    "uf": "UF1",
+    "pregunta": "¿Qué extensión suelen tener los archivos PHP?",
+    "opciones": [
+      ".sql",
+      ".html",
+      ".php"
+    ],
+    "correcta": 2,
+    "explicacion": "Los archivos PHP usan normalmente la extensión .php."
+  },
+  {
+    "id": "UF1-021",
+    "uf": "UF1",
+    "pregunta": "¿Qué etiqueta abre un bloque de código PHP?",
+    "opciones": [
+      "<?php",
+      "<php>",
+      "<script>"
+    ],
+    "correcta": 0,
+    "explicacion": "El código PHP se abre con <?php."
+  },
+  {
+    "id": "UF1-022",
+    "uf": "UF1",
+    "pregunta": "¿Qué atributo del formulario indica a qué archivo se enviarán los datos?",
+    "opciones": [
+      "name",
+      "method",
+      "action"
+    ],
+    "correcta": 2,
+    "explicacion": "El atributo action indica el destino del formulario."
+  },
+  {
+    "id": "UF1-023",
+    "uf": "UF1",
+    "pregunta": "¿Qué atributo indica si los datos se envían por GET o POST?",
+    "opciones": [
+      "action",
+      "method",
+      "type"
+    ],
+    "correcta": 1,
+    "explicacion": "El atributo method especifica GET o POST."
+  },
+  {
+    "id": "UF1-024",
+    "uf": "UF1",
+    "pregunta": "¿Qué botón lanza el envío de un formulario?",
+    "opciones": [
+      "button sin acción",
+      "submit",
+      "reset"
+    ],
+    "correcta": 1,
+    "explicacion": "Un botón de tipo submit envía el formulario."
+  },
+  {
+    "id": "UF1-025",
+    "uf": "UF1",
+    "pregunta": "¿Qué es una petición GET?",
+    "opciones": [
+      "Una petición que puede enviar datos visibles en la URL",
+      "Una petición que nunca puede llevar parámetros",
+      "Una petición exclusiva para bases de datos"
+    ],
+    "correcta": 0,
+    "explicacion": "GET puede enviar parámetros en la URL."
+  },
+  {
+    "id": "UF1-026",
+    "uf": "UF1",
+    "pregunta": "¿Qué es una petición POST?",
+    "opciones": [
+      "Una petición que envía datos en el cuerpo de la petición",
+      "Una petición que solo sirve para borrar datos",
+      "Una petición que siempre muestra los datos en la URL"
+    ],
+    "correcta": 0,
+    "explicacion": "POST envía los datos en el cuerpo de la petición."
+  },
+  {
+    "id": "UF1-027",
+    "uf": "UF1",
+    "pregunta": "¿Qué tecnología estructura el contenido de una página web?",
+    "opciones": [
+      "CSS",
+      "HTML",
+      "MySQL"
+    ],
+    "correcta": 1,
+    "explicacion": "HTML estructura el contenido de la página."
+  },
+  {
+    "id": "UF1-028",
+    "uf": "UF1",
+    "pregunta": "¿Qué tecnología se usa principalmente para dar estilo visual?",
+    "opciones": [
+      "PHP",
+      "CSS",
+      "SQL"
+    ],
+    "correcta": 1,
+    "explicacion": "CSS define la presentación visual."
+  },
+  {
+    "id": "UF1-029",
+    "uf": "UF1",
+    "pregunta": "¿Qué tecnología se usa principalmente para añadir interacción en el navegador?",
+    "opciones": [
+      "MySQL",
+      "Apache",
+      "JavaScript"
+    ],
+    "correcta": 2,
+    "explicacion": "JavaScript añade comportamiento en el cliente."
+  },
+  {
+    "id": "UF1-030",
+    "uf": "UF1",
+    "pregunta": "¿Qué diferencia hay entre código del cliente y código del servidor?",
+    "opciones": [
+      "El del servidor siempre se ve completo desde el navegador",
+      "El del cliente se ejecuta en el navegador y el del servidor en el servidor",
+      "El del cliente siempre se escribe en PHP"
+    ],
+    "correcta": 1,
+    "explicacion": "HTML/CSS/JS suelen ejecutarse en cliente; PHP se ejecuta en servidor."
+  },
+  {
+    "id": "UF2-001",
+    "uf": "UF2",
+    "pregunta": "¿Cómo se declara una variable en PHP?",
+    "opciones": [
+      "var variable",
+      "$variable",
+      "int variable"
+    ],
+    "correcta": 1,
+    "explicacion": "En PHP las variables comienzan con $."
+  },
+  {
+    "id": "UF2-002",
+    "uf": "UF2",
+    "pregunta": "¿Qué símbolo se usa para indicar una variable en PHP?",
+    "opciones": [
+      "@",
+      "#",
+      "$"
+    ],
+    "correcta": 2,
+    "explicacion": "Las variables en PHP comienzan con $."
+  },
+  {
+    "id": "UF2-003",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace echo en PHP?",
+    "opciones": [
+      "Guarda datos en BD",
+      "Crea variables",
+      "Muestra información en pantalla"
+    ],
+    "correcta": 2,
+    "explicacion": "echo imprime salida."
+  },
+  {
+    "id": "UF2-004",
+    "uf": "UF2",
+    "pregunta": "¿Qué diferencia hay entre == y ===?",
+    "opciones": [
+      "== compara valor y tipo",
+      "No hay diferencia",
+      "=== compara valor y tipo"
+    ],
+    "correcta": 2,
+    "explicacion": "=== compara valor y tipo."
+  },
+  {
+    "id": "UF2-005",
+    "uf": "UF2",
+    "pregunta": "¿Qué tipo de dato es true?",
+    "opciones": [
+      "string",
+      "boolean",
+      "int"
+    ],
+    "correcta": 1,
+    "explicacion": "true/false son booleanos."
+  },
+  {
+    "id": "UF2-006",
+    "uf": "UF2",
+    "pregunta": "¿Qué función devuelve el tipo de una variable?",
+    "opciones": [
+      "gettype()",
+      "type()",
+      "varType()"
+    ],
+    "correcta": 0,
+    "explicacion": "gettype devuelve el tipo."
+  },
+  {
+    "id": "UF2-007",
+    "uf": "UF2",
+    "pregunta": "¿Cómo se define una constante en PHP?",
+    "opciones": [
+      "constante()",
+      "new const",
+      "define()"
+    ],
+    "correcta": 2,
+    "explicacion": "define crea constantes."
+  },
+  {
+    "id": "UF2-008",
+    "uf": "UF2",
+    "pregunta": "¿Qué ocurre con las comillas simples en PHP?",
+    "opciones": [
+      "Interpretan variables",
+      "Dan error",
+      "No interpretan variables"
+    ],
+    "correcta": 2,
+    "explicacion": "Solo texto literal."
+  },
+  {
+    "id": "UF2-009",
+    "uf": "UF2",
+    "pregunta": "¿Qué ocurre con las comillas dobles en PHP?",
+    "opciones": [
+      "No interpretan variables",
+      "No funcionan",
+      "Interpretan variables"
+    ],
+    "correcta": 2,
+    "explicacion": "Permiten interpolación."
+  },
+  {
+    "id": "UF2-010",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace nl2br()?",
+    "opciones": [
+      "Borra texto",
+      "Convierte saltos de línea en <br>",
+      "Convierte a mayúsculas"
+    ],
+    "correcta": 1,
+    "explicacion": "nl2br añade <br>."
+  },
+  {
+    "id": "UF2-011",
+    "uf": "UF2",
+    "pregunta": "¿Qué función devuelve la fecha actual?",
+    "opciones": [
+      "date()",
+      "today()",
+      "getDateNow()"
+    ],
+    "correcta": 0,
+    "explicacion": "date formatea fecha."
+  },
+  {
+    "id": "UF2-012",
+    "uf": "UF2",
+    "pregunta": "¿Qué estructura permite tomar decisiones?",
+    "opciones": [
+      "echo",
+      "for",
+      "if"
+    ],
+    "correcta": 2,
+    "explicacion": "if controla flujo."
+  },
+  {
+    "id": "UF2-013",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace un switch?",
+    "opciones": [
+      "Selecciona entre varios casos",
+      "Repite código",
+      "Declara variables"
+    ],
+    "correcta": 0,
+    "explicacion": "switch evalúa múltiples casos."
+  },
+  {
+    "id": "UF2-014",
+    "uf": "UF2",
+    "pregunta": "¿Qué es el operador ternario?",
+    "opciones": [
+      "bucle",
+      "función",
+      "if simplificado"
+    ],
+    "correcta": 2,
+    "explicacion": "Condición abreviada."
+  },
+  {
+    "id": "UF2-015",
+    "uf": "UF2",
+    "pregunta": "¿Qué bucle se ejecuta al menos una vez?",
+    "opciones": [
+      "do-while",
+      "while",
+      "for"
+    ],
+    "correcta": 0,
+    "explicacion": "do-while ejecuta mínimo una vez."
+  },
+  {
+    "id": "UF2-016",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace un bucle for?",
+    "opciones": [
+      "Repite código con contador",
+      "Muestra datos",
+      "Define funciones"
+    ],
+    "correcta": 0,
+    "explicacion": "for repite con control."
+  },
+  {
+    "id": "UF2-017",
+    "uf": "UF2",
+    "pregunta": "¿Qué es un array en PHP?",
+    "opciones": [
+      "Una función",
+      "Un archivo",
+      "Colección de datos"
+    ],
+    "correcta": 2,
+    "explicacion": "Array almacena múltiples valores."
+  },
+  {
+    "id": "UF2-018",
+    "uf": "UF2",
+    "pregunta": "¿Qué tipo de array permite clave-valor?",
+    "opciones": [
+      "Booleano",
+      "Asociativo",
+      "Numérico"
+    ],
+    "correcta": 1,
+    "explicacion": "Array asociativo usa claves."
+  },
+  {
+    "id": "UF2-019",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace foreach?",
+    "opciones": [
+      "Elimina arrays",
+      "Crea arrays",
+      "Recorre arrays"
+    ],
+    "correcta": 2,
+    "explicacion": "foreach recorre colecciones."
+  },
+  {
+    "id": "UF2-020",
+    "uf": "UF2",
+    "pregunta": "¿Cómo se define una función?",
+    "opciones": [
+      "func nombre()",
+      "def nombre()",
+      "function nombre()"
+    ],
+    "correcta": 2,
+    "explicacion": "function define funciones."
+  },
+  {
+    "id": "UF2-021",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace return?",
+    "opciones": [
+      "Devuelve un valor",
+      "Crea variable",
+      "Imprime"
+    ],
+    "correcta": 0,
+    "explicacion": "return devuelve resultado."
+  },
+  {
+    "id": "UF2-022",
+    "uf": "UF2",
+    "pregunta": "¿Qué diferencia hay entre include y require?",
+    "opciones": [
+      "No hay diferencia",
+      "include da error fatal",
+      "require da error fatal si falla"
+    ],
+    "correcta": 2,
+    "explicacion": "require detiene ejecución."
+  },
+  {
+    "id": "UF2-023",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace include?",
+    "opciones": [
+      "Crea BD",
+      "Incluye archivo",
+      "Ejecuta SQL"
+    ],
+    "correcta": 1,
+    "explicacion": "Incluye código externo."
+  },
+  {
+    "id": "UF2-024",
+    "uf": "UF2",
+    "pregunta": "¿Qué hace require?",
+    "opciones": [
+      "Borra datos",
+      "Incluye archivo obligatorio",
+      "Ejecuta HTML"
+    ],
+    "correcta": 1,
+    "explicacion": "Similar a include pero obligatorio."
+  },
+  {
+    "id": "UF2-025",
+    "uf": "UF2",
+    "pregunta": "¿Qué es una variable dinámica en PHP?",
+    "opciones": [
+      "No necesita tipo fijo",
+      "Tiene tipo fijo",
+      "Solo números"
+    ],
+    "correcta": 0,
+    "explicacion": "PHP es tipado dinámico."
+  },
+  {
+    "id": "UF2-026",
+    "uf": "UF2",
+    "pregunta": "¿Qué operador se usa para concatenar?",
+    "opciones": [
+      ".",
+      "+",
+      "&"
+    ],
+    "correcta": 0,
+    "explicacion": "En PHP se usa ."
+  },
+  {
+    "id": "UF2-027",
+    "uf": "UF2",
+    "pregunta": "¿Qué función comprueba si existe una variable?",
+    "opciones": [
+      "exists()",
+      "isset()",
+      "check()"
+    ],
+    "correcta": 1,
+    "explicacion": "isset verifica existencia."
+  },
+  {
+    "id": "UF2-028",
+    "uf": "UF2",
+    "pregunta": "¿Qué función comprueba si está vacía?",
+    "opciones": [
+      "void()",
+      "empty()",
+      "null()"
+    ],
+    "correcta": 1,
+    "explicacion": "empty evalúa vacío."
+  },
+  {
+    "id": "UF2-029",
+    "uf": "UF2",
+    "pregunta": "¿Qué devuelve strpos()?",
+    "opciones": [
+      "Texto completo",
+      "Booleano siempre",
+      "Posición de un texto"
+    ],
+    "correcta": 2,
+    "explicacion": "strpos devuelve posición."
+  },
+  {
+    "id": "UF2-030",
+    "uf": "UF2",
+    "pregunta": "¿Qué es un script PHP?",
+    "opciones": [
+      "CSS",
+      "Código ejecutado en servidor",
+      "HTML"
+    ],
+    "correcta": 1,
+    "explicacion": "PHP se ejecuta en servidor."
+  },
+  {
+    "id": "UF3-001",
+    "uf": "UF3",
+    "pregunta": "¿Qué método envía datos en la URL? ",
+    "opciones": [
+      "POST",
+      "GET",
+      "PUT"
+    ],
+    "correcta": 1,
+    "explicacion": "GET envía datos en la URL."
+  },
+  {
+    "id": "UF3-002",
+    "uf": "UF3",
+    "pregunta": "¿Qué método envía datos en el cuerpo de la petición? ",
+    "opciones": [
+      "DELETE",
+      "GET",
+      "POST"
+    ],
+    "correcta": 2,
+    "explicacion": "POST envía datos en el cuerpo."
+  },
+  {
+    "id": "UF3-003",
+    "uf": "UF3",
+    "pregunta": "¿Qué variable recoge datos GET en PHP?",
+    "opciones": [
+      "$_POST",
+      "$_SESSION",
+      "$_GET"
+    ],
+    "correcta": 2,
+    "explicacion": "$_GET recoge datos enviados por GET."
+  },
+  {
+    "id": "UF3-004",
+    "uf": "UF3",
+    "pregunta": "¿Qué variable recoge datos POST en PHP?",
+    "opciones": [
+      "$_GET",
+      "$_COOKIE",
+      "$_POST"
+    ],
+    "correcta": 2,
+    "explicacion": "$_POST recoge datos enviados por POST."
+  },
+  {
+    "id": "UF3-005",
+    "uf": "UF3",
+    "pregunta": "¿Qué variable combina GET y POST?",
+    "opciones": [
+      "$_SESSION",
+      "$_REQUEST",
+      "$_SERVER"
+    ],
+    "correcta": 1,
+    "explicacion": "$_REQUEST combina varios métodos."
+  },
+  {
+    "id": "UF3-006",
+    "uf": "UF3",
+    "pregunta": "¿Qué atributo indica el destino del formulario?",
+    "opciones": [
+      "action",
+      "method",
+      "name"
+    ],
+    "correcta": 0,
+    "explicacion": "action indica dónde se envían los datos."
+  },
+  {
+    "id": "UF3-007",
+    "uf": "UF3",
+    "pregunta": "¿Qué atributo indica el método del formulario?",
+    "opciones": [
+      "action",
+      "type",
+      "method"
+    ],
+    "correcta": 2,
+    "explicacion": "method define GET o POST."
+  },
+  {
+    "id": "UF3-008",
+    "uf": "UF3",
+    "pregunta": "¿Qué devuelve un input radio?",
+    "opciones": [
+      "Un array",
+      "Nada",
+      "Un solo valor"
+    ],
+    "correcta": 2,
+    "explicacion": "Solo una opción seleccionada."
+  },
+  {
+    "id": "UF3-009",
+    "uf": "UF3",
+    "pregunta": "¿Qué devuelve un checkbox múltiple?",
+    "opciones": [
+      "Un string",
+      "Un número",
+      "Un array"
+    ],
+    "correcta": 2,
+    "explicacion": "Checkbox múltiple devuelve array."
+  },
+  {
+    "id": "UF3-010",
+    "uf": "UF3",
+    "pregunta": "¿Qué hace isset()?",
+    "opciones": [
+      "Comprueba si es número",
+      "Comprueba si existe una variable",
+      "Borra variable"
+    ],
+    "correcta": 1,
+    "explicacion": "isset verifica existencia."
+  },
+  {
+    "id": "UF3-011",
+    "uf": "UF3",
+    "pregunta": "¿Qué hace empty()?",
+    "opciones": [
+      "Comprueba si está vacía",
+      "Elimina variable",
+      "Comprueba tipo"
+    ],
+    "correcta": 0,
+    "explicacion": "empty evalúa vacío."
+  },
+  {
+    "id": "UF3-012",
+    "uf": "UF3",
+    "pregunta": "¿Qué función evita XSS?",
+    "opciones": [
+      "isset()",
+      "echo()",
+      "htmlspecialchars()"
+    ],
+    "correcta": 2,
+    "explicacion": "htmlspecialchars evita ejecución de scripts."
+  },
+  {
+    "id": "UF3-013",
+    "uf": "UF3",
+    "pregunta": "¿Qué ataque es XSS?",
+    "opciones": [
+      "Inyección de scripts en páginas web",
+      "Ataque a base de datos",
+      "Error de servidor"
+    ],
+    "correcta": 0,
+    "explicacion": "XSS ejecuta scripts maliciosos."
+  },
+  {
+    "id": "UF3-014",
+    "uf": "UF3",
+    "pregunta": "¿Qué hace strip_tags()?",
+    "opciones": [
+      "Convierte texto",
+      "Valida números",
+      "Elimina etiquetas HTML"
+    ],
+    "correcta": 2,
+    "explicacion": "strip_tags elimina etiquetas."
+  },
+  {
+    "id": "UF3-015",
+    "uf": "UF3",
+    "pregunta": "¿Qué hace header('Location:...')?",
+    "opciones": [
+      "Redirige a otra página",
+      "Muestra HTML",
+      "Guarda datos"
+    ],
+    "correcta": 0,
+    "explicacion": "header permite redirecciones."
+  },
+  {
+    "id": "UF3-016",
+    "uf": "UF3",
+    "pregunta": "¿Dónde debe ir header()?",
+    "opciones": [
+      "Antes de cualquier salida",
+      "En CSS",
+      "Después del HTML"
+    ],
+    "correcta": 0,
+    "explicacion": "Debe ir antes de output."
+  },
+  {
+    "id": "UF3-017",
+    "uf": "UF3",
+    "pregunta": "¿Qué hace session_start()?",
+    "opciones": [
+      "Borra sesión",
+      "Crea cookie",
+      "Inicia sesión"
+    ],
+    "correcta": 2,
+    "explicacion": "session_start inicia sesiones."
+  },
+  {
+    "id": "UF3-018",
+    "uf": "UF3",
+    "pregunta": "¿Dónde se guardan las sesiones?",
+    "opciones": [
+      "En el navegador",
+      "En el servidor",
+      "En el cliente"
+    ],
+    "correcta": 1,
+    "explicacion": "Sesiones están en servidor."
+  },
+  {
+    "id": "UF3-019",
+    "uf": "UF3",
+    "pregunta": "¿Cómo se accede a datos de sesión?",
+    "opciones": [
+      "$_GET",
+      "$_COOKIE",
+      "$_SESSION"
+    ],
+    "correcta": 2,
+    "explicacion": "$_SESSION almacena datos."
+  },
+  {
+    "id": "UF3-020",
+    "uf": "UF3",
+    "pregunta": "¿Qué hace session_destroy()?",
+    "opciones": [
+      "Actualiza sesión",
+      "Crea sesión",
+      "Elimina la sesión"
+    ],
+    "correcta": 2,
+    "explicacion": "Destruye la sesión."
+  },
+  {
+    "id": "UF3-021",
+    "uf": "UF3",
+    "pregunta": "¿Qué hace unset() en sesiones?",
+    "opciones": [
+      "Elimina una variable",
+      "Imprime",
+      "Crea variable"
+    ],
+    "correcta": 0,
+    "explicacion": "unset elimina variables."
+  },
+  {
+    "id": "UF3-022",
+    "uf": "UF3",
+    "pregunta": "¿Dónde se almacenan las cookies?",
+    "opciones": [
+      "En la BD",
+      "En el servidor",
+      "En el cliente"
+    ],
+    "correcta": 2,
+    "explicacion": "Cookies están en cliente."
+  },
+  {
+    "id": "UF3-023",
+    "uf": "UF3",
+    "pregunta": "¿Qué función crea cookies?",
+    "opciones": [
+      "cookie()",
+      "setcookie()",
+      "createCookie()"
+    ],
+    "correcta": 1,
+    "explicacion": "setcookie crea cookies."
+  },
+  {
+    "id": "UF3-024",
+    "uf": "UF3",
+    "pregunta": "¿Cómo se accede a cookies?",
+    "opciones": [
+      "$_POST",
+      "$_COOKIE",
+      "$_SESSION"
+    ],
+    "correcta": 1,
+    "explicacion": "$_COOKIE contiene cookies."
+  },
+  {
+    "id": "UF3-025",
+    "uf": "UF3",
+    "pregunta": "¿Qué estructura controla excepciones?",
+    "opciones": [
+      "try-catch",
+      "if-else",
+      "switch"
+    ],
+    "correcta": 0,
+    "explicacion": "try-catch gestiona errores."
+  },
+  {
+    "id": "UF3-026",
+    "uf": "UF3",
+    "pregunta": "¿Qué ocurre en catch?",
+    "opciones": [
+      "Se captura el error",
+      "Se crea variable",
+      "Se ejecuta bucle"
+    ],
+    "correcta": 0,
+    "explicacion": "catch captura excepciones."
+  },
+  {
+    "id": "UF3-027",
+    "uf": "UF3",
+    "pregunta": "¿Qué error ocurre al dividir por cero?",
+    "opciones": [
+      "Warning",
+      "Error",
+      "Nada"
+    ],
+    "correcta": 1,
+    "explicacion": "División por cero genera error."
+  },
+  {
+    "id": "UF3-028",
+    "uf": "UF3",
+    "pregunta": "¿Qué es una sesión?",
+    "opciones": [
+      "Un formulario",
+      "Datos persistentes entre páginas",
+      "Un archivo"
+    ],
+    "correcta": 1,
+    "explicacion": "Sesión guarda datos."
+  },
+  {
+    "id": "UF3-029",
+    "uf": "UF3",
+    "pregunta": "¿Qué es validación de datos?",
+    "opciones": [
+      "Guardar datos",
+      "Eliminar datos",
+      "Comprobar datos antes de usar"
+    ],
+    "correcta": 2,
+    "explicacion": "Validar asegura datos correctos."
+  },
+  {
+    "id": "UF3-030",
+    "uf": "UF3",
+    "pregunta": "¿Dónde es obligatorio validar datos?",
+    "opciones": [
+      "Navegador",
+      "Servidor",
+      "Cliente"
+    ],
+    "correcta": 1,
+    "explicacion": "Siempre en servidor."
+  },
+  {
+    "id": "UF4-001",
+    "uf": "UF4",
+    "pregunta": "¿Qué función comprueba si existe un fichero?",
+    "opciones": [
+      "is_file()",
+      "file_exists()",
+      "exists_file()"
+    ],
+    "correcta": 1,
+    "explicacion": "file_exists() devuelve true si existe el fichero o ruta."
+  },
+  {
+    "id": "UF4-002",
+    "uf": "UF4",
+    "pregunta": "¿Qué función comprueba si una ruta corresponde a un fichero?",
+    "opciones": [
+      "is_dir()",
+      "file_exists()",
+      "is_file()"
+    ],
+    "correcta": 2,
+    "explicacion": "is_file() comprueba si la ruta es un fichero."
+  },
+  {
+    "id": "UF4-003",
+    "uf": "UF4",
+    "pregunta": "¿Qué función comprueba si una ruta corresponde a un directorio?",
+    "opciones": [
+      "is_file()",
+      "dirname()",
+      "is_dir()"
+    ],
+    "correcta": 2,
+    "explicacion": "is_dir() devuelve true si es un directorio."
+  },
+  {
+    "id": "UF4-004",
+    "uf": "UF4",
+    "pregunta": "¿Qué función devuelve el directorio actual?",
+    "opciones": [
+      "dirname()",
+      "chdir()",
+      "getcwd()"
+    ],
+    "correcta": 2,
+    "explicacion": "getcwd() devuelve el directorio actual."
+  },
+  {
+    "id": "UF4-005",
+    "uf": "UF4",
+    "pregunta": "¿Qué función cambia el directorio actual?",
+    "opciones": [
+      "getcwd()",
+      "chdir()",
+      "rmdir()"
+    ],
+    "correcta": 1,
+    "explicacion": "chdir() cambia el directorio de trabajo."
+  },
+  {
+    "id": "UF4-006",
+    "uf": "UF4",
+    "pregunta": "¿Qué función crea un directorio?",
+    "opciones": [
+      "mkdir()",
+      "rmdir()",
+      "opendir()"
+    ],
+    "correcta": 0,
+    "explicacion": "mkdir() crea directorios."
+  },
+  {
+    "id": "UF4-007",
+    "uf": "UF4",
+    "pregunta": "¿Qué función elimina un archivo?",
+    "opciones": [
+      "rmdir()",
+      "delete()",
+      "unlink()"
+    ],
+    "correcta": 2,
+    "explicacion": "unlink() borra archivos o enlaces."
+  },
+  {
+    "id": "UF4-008",
+    "uf": "UF4",
+    "pregunta": "¿Qué función copia un fichero?",
+    "opciones": [
+      "rename()",
+      "move()",
+      "copy()"
+    ],
+    "correcta": 2,
+    "explicacion": "copy() copia de origen a destino."
+  },
+  {
+    "id": "UF4-009",
+    "uf": "UF4",
+    "pregunta": "¿Qué función puede renombrar o mover un fichero?",
+    "opciones": [
+      "copy()",
+      "unlink()",
+      "rename()"
+    ],
+    "correcta": 2,
+    "explicacion": "rename() renombra y también puede mover si se indica otra ruta."
+  },
+  {
+    "id": "UF4-010",
+    "uf": "UF4",
+    "pregunta": "¿Qué función devuelve el tamaño de un archivo?",
+    "opciones": [
+      "filetype()",
+      "filesize()",
+      "stat()"
+    ],
+    "correcta": 1,
+    "explicacion": "filesize() devuelve bytes."
+  },
+  {
+    "id": "UF4-011",
+    "uf": "UF4",
+    "pregunta": "¿Qué modo de fopen abre solo para lectura?",
+    "opciones": [
+      "r",
+      "w",
+      "a"
+    ],
+    "correcta": 0,
+    "explicacion": "r abre para lectura."
+  },
+  {
+    "id": "UF4-012",
+    "uf": "UF4",
+    "pregunta": "¿Qué modo de fopen escribe desde el principio y vacía el fichero si existe?",
+    "opciones": [
+      "r",
+      "a",
+      "w"
+    ],
+    "correcta": 2,
+    "explicacion": "w abre para escritura y vacía el contenido existente."
+  },
+  {
+    "id": "UF4-013",
+    "uf": "UF4",
+    "pregunta": "¿Qué modo de fopen añade contenido al final?",
+    "opciones": [
+      "a",
+      "w",
+      "x"
+    ],
+    "correcta": 0,
+    "explicacion": "a significa append."
+  },
+  {
+    "id": "UF4-014",
+    "uf": "UF4",
+    "pregunta": "¿Qué modo permite leer y escribir añadiendo al final?",
+    "opciones": [
+      "r",
+      "w",
+      "a+"
+    ],
+    "correcta": 2,
+    "explicacion": "a+ permite lectura y escritura, con el puntero al final."
+  },
+  {
+    "id": "UF4-015",
+    "uf": "UF4",
+    "pregunta": "¿Qué función lee todo el contenido de un fichero en una cadena?",
+    "opciones": [
+      "file_get_contents()",
+      "file()",
+      "fgets()"
+    ],
+    "correcta": 0,
+    "explicacion": "file_get_contents() devuelve el contenido como string."
+  },
+  {
+    "id": "UF4-016",
+    "uf": "UF4",
+    "pregunta": "¿Qué función lee un fichero y devuelve un array de líneas?",
+    "opciones": [
+      "file()",
+      "fgetc()",
+      "readfile()"
+    ],
+    "correcta": 0,
+    "explicacion": "file() devuelve un array, una posición por línea."
+  },
+  {
+    "id": "UF4-017",
+    "uf": "UF4",
+    "pregunta": "¿Qué función lee una línea de un fichero abierto?",
+    "opciones": [
+      "fgetc()",
+      "fread()",
+      "fgets()"
+    ],
+    "correcta": 2,
+    "explicacion": "fgets() lee línea a línea."
+  },
+  {
+    "id": "UF4-018",
+    "uf": "UF4",
+    "pregunta": "¿Qué función lee un carácter de un fichero abierto?",
+    "opciones": [
+      "file()",
+      "fgetc()",
+      "fgets()"
+    ],
+    "correcta": 1,
+    "explicacion": "fgetc() lee carácter a carácter."
+  },
+  {
+    "id": "UF4-019",
+    "uf": "UF4",
+    "pregunta": "¿Qué función indica si se llegó al final del fichero?",
+    "opciones": [
+      "rewind()",
+      "fclose()",
+      "feof()"
+    ],
+    "correcta": 2,
+    "explicacion": "feof() detecta fin de fichero."
+  },
+  {
+    "id": "UF4-020",
+    "uf": "UF4",
+    "pregunta": "¿Qué función cierra un fichero abierto?",
+    "opciones": [
+      "exit()",
+      "closedir()",
+      "fclose()"
+    ],
+    "correcta": 2,
+    "explicacion": "fclose() cierra un manejador de fichero."
+  },
+  {
+    "id": "UF4-021",
+    "uf": "UF4",
+    "pregunta": "¿Qué función escribe en un fichero?",
+    "opciones": [
+      "fwrite()",
+      "fgets()",
+      "fread()"
+    ],
+    "correcta": 0,
+    "explicacion": "fwrite() escribe contenido."
+  },
+  {
+    "id": "UF4-022",
+    "uf": "UF4",
+    "pregunta": "¿Qué hace rewind()?",
+    "opciones": [
+      "Cierra el fichero",
+      "Borra el fichero",
+      "Mueve el puntero al inicio del fichero"
+    ],
+    "correcta": 2,
+    "explicacion": "rewind() rebobina el puntero."
+  },
+  {
+    "id": "UF4-023",
+    "uf": "UF4",
+    "pregunta": "¿Qué función permite mover el puntero dentro del fichero?",
+    "opciones": [
+      "fmove()",
+      "fseek()",
+      "fpoint()"
+    ],
+    "correcta": 1,
+    "explicacion": "fseek() desplaza el puntero."
+  },
+  {
+    "id": "UF4-024",
+    "uf": "UF4",
+    "pregunta": "¿Qué función permite leer CSV?",
+    "opciones": [
+      "readcsv()",
+      "fgetcsv()",
+      "filecsv()"
+    ],
+    "correcta": 1,
+    "explicacion": "fgetcsv() lee datos CSV."
+  },
+  {
+    "id": "UF4-025",
+    "uf": "UF4",
+    "pregunta": "¿Qué función carga un XML desde archivo?",
+    "opciones": [
+      "simplexml_load_file()",
+      "json_decode()",
+      "xml_file()"
+    ],
+    "correcta": 0,
+    "explicacion": "simplexml_load_file() carga XML como objeto SimpleXML."
+  },
+  {
+    "id": "UF4-026",
+    "uf": "UF4",
+    "pregunta": "En SimpleXML, ¿cómo suelen leerse las subetiquetas?",
+    "opciones": [
+      "Como propiedades de un objeto",
+      "Como comentarios",
+      "Como funciones"
+    ],
+    "correcta": 0,
+    "explicacion": "Las subetiquetas se acceden como propiedades."
+  },
+  {
+    "id": "UF4-027",
+    "uf": "UF4",
+    "pregunta": "¿Qué función convierte JSON a variable PHP?",
+    "opciones": [
+      "json_encode()",
+      "json_decode()",
+      "file_get_contents()"
+    ],
+    "correcta": 1,
+    "explicacion": "json_decode() decodifica JSON."
+  },
+  {
+    "id": "UF4-028",
+    "uf": "UF4",
+    "pregunta": "¿Qué hace el segundo parámetro true en json_decode($json, true)?",
+    "opciones": [
+      "Devuelve XML",
+      "Devuelve array asociativo",
+      "Borra claves"
+    ],
+    "correcta": 1,
+    "explicacion": "Con true se obtiene array asociativo."
+  },
+  {
+    "id": "UF4-029",
+    "uf": "UF4",
+    "pregunta": "¿Qué función convierte una variable PHP a JSON?",
+    "opciones": [
+      "json_decode()",
+      "toJSON()",
+      "json_encode()"
+    ],
+    "correcta": 2,
+    "explicacion": "json_encode() codifica a JSON."
+  },
+  {
+    "id": "UF4-030",
+    "uf": "UF4",
+    "pregunta": "¿Qué clase se usa habitualmente para conectar PHP con MySQL de forma moderna?",
+    "opciones": [
+      "SimpleXML",
+      "PDO",
+      "DOMDocument"
+    ],
+    "correcta": 1,
+    "explicacion": "PDO permite conectar y trabajar con bases de datos."
+  },
+  {
+    "id": "UF4-031",
+    "uf": "UF4",
+    "pregunta": "¿Qué excepción se captura al fallar una conexión PDO?",
+    "opciones": [
+      "SQLException",
+      "DatabaseError",
+      "PDOException"
+    ],
+    "correcta": 2,
+    "explicacion": "PDOException gestiona errores PDO."
+  },
+  {
+    "id": "UF4-032",
+    "uf": "UF4",
+    "pregunta": "¿Qué método PDO se usa normalmente para INSERT, UPDATE y DELETE simples?",
+    "opciones": [
+      "exec()",
+      "fetch()",
+      "query()"
+    ],
+    "correcta": 0,
+    "explicacion": "exec() ejecuta instrucciones que no devuelven filas y devuelve filas afectadas."
+  },
+  {
+    "id": "UF4-033",
+    "uf": "UF4",
+    "pregunta": "¿Qué método PDO se usa normalmente para SELECT?",
+    "opciones": [
+      "query()",
+      "commit()",
+      "exec()"
+    ],
+    "correcta": 0,
+    "explicacion": "query() se usa para consultas que devuelven datos."
+  },
+  {
+    "id": "UF4-034",
+    "uf": "UF4",
+    "pregunta": "¿Qué método permite obtener la siguiente fila de un resultado?",
+    "opciones": [
+      "nextRow()",
+      "fetchAll()",
+      "fetch()"
+    ],
+    "correcta": 2,
+    "explicacion": "fetch() obtiene fila a fila."
+  },
+  {
+    "id": "UF4-035",
+    "uf": "UF4",
+    "pregunta": "¿Qué es CRUD?",
+    "opciones": [
+      "Copiar, recorrer, unir y devolver",
+      "Crear, leer, actualizar y borrar",
+      "Conectar, renderizar, usar y desplegar"
+    ],
+    "correcta": 1,
+    "explicacion": "CRUD: Create, Read, Update, Delete."
+  },
+  {
+    "id": "UF4-036",
+    "uf": "UF4",
+    "pregunta": "¿Qué técnica ayuda a evitar inyección SQL?",
+    "opciones": [
+      "Declaraciones preparadas",
+      "Concatenar directamente $_POST",
+      "Usar echo"
+    ],
+    "correcta": 0,
+    "explicacion": "Prepared statements separan SQL de datos."
+  },
+  {
+    "id": "UF4-037",
+    "uf": "UF4",
+    "pregunta": "¿Qué método PDO prepara una sentencia?",
+    "opciones": [
+      "query()",
+      "prepare()",
+      "connect()"
+    ],
+    "correcta": 1,
+    "explicacion": "prepare() prepara una consulta parametrizada."
+  },
+  {
+    "id": "UF4-038",
+    "uf": "UF4",
+    "pregunta": "¿Qué método ejecuta una sentencia preparada?",
+    "opciones": [
+      "run()",
+      "execute()",
+      "launch()"
+    ],
+    "correcta": 1,
+    "explicacion": "execute() ejecuta la sentencia preparada."
+  },
+  {
+    "id": "UF4-039",
+    "uf": "UF4",
+    "pregunta": "¿Qué función se usa para guardar contraseñas de forma segura?",
+    "opciones": [
+      "md5()",
+      "password_hash()",
+      "base64_encode()"
+    ],
+    "correcta": 1,
+    "explicacion": "password_hash() genera un hash seguro."
+  },
+  {
+    "id": "UF4-040",
+    "uf": "UF4",
+    "pregunta": "¿Qué función comprueba una contraseña frente a su hash?",
+    "opciones": [
+      "hash_compare()",
+      "password_check()",
+      "password_verify()"
+    ],
+    "correcta": 2,
+    "explicacion": "password_verify() verifica una contraseña contra un hash."
+  },
+  {
+    "id": "UF5-001",
+    "uf": "UF5",
+    "pregunta": "¿Qué es un framework?",
+    "opciones": [
+      "Un lenguaje que sustituye a PHP",
+      "Una estructura base con herramientas para desarrollar aplicaciones",
+      "Una base de datos relacional"
+    ],
+    "correcta": 1,
+    "explicacion": "Un framework ofrece estructura, utilidades y organización para desarrollar más rápido."
+  },
+  {
+    "id": "UF5-002",
+    "uf": "UF5",
+    "pregunta": "¿Qué patrón usa principalmente Laravel?",
+    "opciones": [
+      "DNS",
+      "FTP",
+      "MVC"
+    ],
+    "correcta": 2,
+    "explicacion": "Laravel se basa en el patrón Modelo-Vista-Controlador."
+  },
+  {
+    "id": "UF5-003",
+    "uf": "UF5",
+    "pregunta": "En MVC, ¿qué representa el Modelo?",
+    "opciones": [
+      "El HTML final que ve el usuario",
+      "El archivo de estilos",
+      "La gestión de datos y reglas de negocio"
+    ],
+    "correcta": 2,
+    "explicacion": "El modelo se relaciona con los datos y la lógica de negocio."
+  },
+  {
+    "id": "UF5-004",
+    "uf": "UF5",
+    "pregunta": "En MVC, ¿qué representa la Vista?",
+    "opciones": [
+      "La conexión con la base de datos",
+      "El terminal de comandos",
+      "La presentación que ve el usuario"
+    ],
+    "correcta": 2,
+    "explicacion": "La vista es la capa de presentación."
+  },
+  {
+    "id": "UF5-005",
+    "uf": "UF5",
+    "pregunta": "En MVC, ¿qué hace el Controlador?",
+    "opciones": [
+      "Solo guarda CSS",
+      "Coordina petición, modelo y vista",
+      "Es siempre una tabla"
+    ],
+    "correcta": 1,
+    "explicacion": "El controlador recibe peticiones, coordina lógica y devuelve respuestas."
+  },
+  {
+    "id": "UF5-006",
+    "uf": "UF5",
+    "pregunta": "¿Cuál es una ventaja de usar frameworks?",
+    "opciones": [
+      "Código más organizado y desarrollo más rápido",
+      "Eliminar toda validación",
+      "No usar servidor"
+    ],
+    "correcta": 0,
+    "explicacion": "Los frameworks ayudan a organizar y acelerar el desarrollo."
+  },
+  {
+    "id": "UF5-007",
+    "uf": "UF5",
+    "pregunta": "¿Cuál es un posible inconveniente de un framework?",
+    "opciones": [
+      "No permite bases de datos",
+      "No permite formularios",
+      "Mayor carga o complejidad que PHP muy simple"
+    ],
+    "correcta": 2,
+    "explicacion": "Un framework puede añadir sobrecarga frente a código mínimo propio."
+  },
+  {
+    "id": "UF5-008",
+    "uf": "UF5",
+    "pregunta": "¿Qué gestor de dependencias se usa para instalar Laravel?",
+    "opciones": [
+      "npm únicamente",
+      "phpMyAdmin",
+      "Composer"
+    ],
+    "correcta": 2,
+    "explicacion": "Laravel se instala y gestiona con Composer."
+  },
+  {
+    "id": "UF5-009",
+    "uf": "UF5",
+    "pregunta": "¿Qué comando instala el instalador de Laravel globalmente?",
+    "opciones": [
+      "php artisan install laravel",
+      "npm install laravel",
+      "composer global require laravel/installer"
+    ],
+    "correcta": 2,
+    "explicacion": "Ese comando instala el instalador de Laravel."
+  },
+  {
+    "id": "UF5-010",
+    "uf": "UF5",
+    "pregunta": "¿Qué comando crea un proyecto Laravel con el instalador?",
+    "opciones": [
+      "php artisan new nombreProyecto",
+      "laravel new nombreProyecto",
+      "composer migrate nombreProyecto"
+    ],
+    "correcta": 1,
+    "explicacion": "laravel new crea un nuevo proyecto si está instalado el instalador."
+  },
+  {
+    "id": "UF5-011",
+    "uf": "UF5",
+    "pregunta": "¿Qué comando levanta el servidor interno de Laravel?",
+    "opciones": [
+      "php artisan serve",
+      "php artisan start",
+      "laravel run"
+    ],
+    "correcta": 0,
+    "explicacion": "php artisan serve inicia el servidor de desarrollo."
+  },
+  {
+    "id": "UF5-012",
+    "uf": "UF5",
+    "pregunta": "¿Qué puerto suele usar php artisan serve por defecto?",
+    "opciones": [
+      "27017",
+      "3306",
+      "8000"
+    ],
+    "correcta": 2,
+    "explicacion": "Laravel suele servir en http://127.0.0.1:8000."
+  },
+  {
+    "id": "UF5-013",
+    "uf": "UF5",
+    "pregunta": "¿Qué es Artisan?",
+    "opciones": [
+      "La interfaz de línea de comandos de Laravel",
+      "Un motor de base de datos",
+      "Una librería CSS"
+    ],
+    "correcta": 0,
+    "explicacion": "Artisan permite crear controladores, modelos, migraciones, etc."
+  },
+  {
+    "id": "UF5-014",
+    "uf": "UF5",
+    "pregunta": "¿Qué comando muestra opciones de Artisan?",
+    "opciones": [
+      "php artisan options",
+      "artisan help web",
+      "php artisan list"
+    ],
+    "correcta": 2,
+    "explicacion": "php artisan list muestra comandos disponibles."
+  },
+  {
+    "id": "UF5-015",
+    "uf": "UF5",
+    "pregunta": "¿Qué carpeta contiene el código principal de la aplicación?",
+    "opciones": [
+      "app",
+      "public",
+      "vendor"
+    ],
+    "correcta": 0,
+    "explicacion": "app contiene el código principal."
+  },
+  {
+    "id": "UF5-016",
+    "uf": "UF5",
+    "pregunta": "¿Qué carpeta contiene las rutas web?",
+    "opciones": [
+      "routes",
+      "database",
+      "storage"
+    ],
+    "correcta": 0,
+    "explicacion": "Las rutas están en routes, especialmente web.php."
+  },
+  {
+    "id": "UF5-017",
+    "uf": "UF5",
+    "pregunta": "¿Qué archivo contiene normalmente las rutas web?",
+    "opciones": [
+      "public/index.php",
+      "resources/views/web.php",
+      "routes/web.php"
+    ],
+    "correcta": 2,
+    "explicacion": "Las rutas web se definen en routes/web.php."
+  },
+  {
+    "id": "UF5-018",
+    "uf": "UF5",
+    "pregunta": "¿Qué carpeta contiene las vistas?",
+    "opciones": [
+      "public/views",
+      "resources/views",
+      "app/Views"
+    ],
+    "correcta": 1,
+    "explicacion": "Laravel guarda vistas en resources/views."
+  },
+  {
+    "id": "UF5-019",
+    "uf": "UF5",
+    "pregunta": "¿Qué carpeta debe ser pública en el servidor?",
+    "opciones": [
+      "config",
+      "app",
+      "public"
+    ],
+    "correcta": 2,
+    "explicacion": "public es la carpeta visible desde el servidor web."
+  },
+  {
+    "id": "UF5-020",
+    "uf": "UF5",
+    "pregunta": "¿Qué archivo inicia la aplicación desde la carpeta pública?",
+    "opciones": [
+      "routes/web.php",
+      "app/start.php",
+      "public/index.php"
+    ],
+    "correcta": 2,
+    "explicacion": "public/index.php es el punto de entrada."
+  },
+  {
+    "id": "UF5-021",
+    "uf": "UF5",
+    "pregunta": "¿Para qué sirve el archivo .env?",
+    "opciones": [
+      "Guardar configuración del entorno, como la base de datos",
+      "Guardar controladores",
+      "Definir vistas Blade"
+    ],
+    "correcta": 0,
+    "explicacion": ".env contiene configuración local como credenciales de BD."
+  },
+  {
+    "id": "UF5-022",
+    "uf": "UF5",
+    "pregunta": "¿Qué datos de BD suelen configurarse en .env?",
+    "opciones": [
+      "VIEW_NAME, ROUTE_NAME y MODEL_NAME",
+      "HTML_TITLE, CSS_COLOR y JS_FILE",
+      "DB_DATABASE, DB_USERNAME y DB_PASSWORD"
+    ],
+    "correcta": 2,
+    "explicacion": ".env incluye variables de conexión a base de datos."
+  },
+  {
+    "id": "UF5-023",
+    "uf": "UF5",
+    "pregunta": "¿Qué carpeta contiene migraciones y seeds?",
+    "opciones": [
+      "resources",
+      "database",
+      "bootstrap"
+    ],
+    "correcta": 1,
+    "explicacion": "database contiene migraciones, seeders y factories."
+  },
+  {
+    "id": "UF5-024",
+    "uf": "UF5",
+    "pregunta": "¿Qué carpeta contiene dependencias instaladas por Composer?",
+    "opciones": [
+      "routes",
+      "vendor",
+      "storage"
+    ],
+    "correcta": 1,
+    "explicacion": "vendor contiene librerías y dependencias."
+  },
+  {
+    "id": "UF5-025",
+    "uf": "UF5",
+    "pregunta": "¿Qué comando crea un controlador?",
+    "opciones": [
+      "php artisan make:controller NombreController",
+      "php artisan controller:new NombreController",
+      "laravel create controller"
+    ],
+    "correcta": 0,
+    "explicacion": "make:controller crea controladores."
+  },
+  {
+    "id": "UF5-026",
+    "uf": "UF5",
+    "pregunta": "¿Dónde se guardan los controladores?",
+    "opciones": [
+      "app/Http/Controllers",
+      "resources/views",
+      "database/migrations"
+    ],
+    "correcta": 0,
+    "explicacion": "Los controladores están en app/Http/Controllers."
+  },
+  {
+    "id": "UF5-027",
+    "uf": "UF5",
+    "pregunta": "¿Qué es un controlador invoke?",
+    "opciones": [
+      "Un controlador sin rutas",
+      "Un controlador de un solo método",
+      "Una vista reutilizable"
+    ],
+    "correcta": 1,
+    "explicacion": "Un controlador invokable tiene un método __invoke."
+  },
+  {
+    "id": "UF5-028",
+    "uf": "UF5",
+    "pregunta": "¿Qué opción crea un controlador de recursos?",
+    "opciones": [
+      "-i o --invoke",
+      "-r o --resource",
+      "-m o --migration"
+    ],
+    "correcta": 1,
+    "explicacion": "La opción resource crea métodos tipo index, create, store, etc."
+  },
+  {
+    "id": "UF5-029",
+    "uf": "UF5",
+    "pregunta": "En un controlador de recurso, ¿qué hace index()?",
+    "opciones": [
+      "Guarda un nuevo registro",
+      "Elimina un registro",
+      "Muestra un listado"
+    ],
+    "correcta": 2,
+    "explicacion": "index suele listar recursos."
+  },
+  {
+    "id": "UF5-030",
+    "uf": "UF5",
+    "pregunta": "En un controlador de recurso, ¿qué hace store()?",
+    "opciones": [
+      "Elimina un registro",
+      "Guarda un recurso nuevo",
+      "Muestra formulario de edición"
+    ],
+    "correcta": 1,
+    "explicacion": "store procesa y guarda datos nuevos."
+  },
+  {
+    "id": "UF5-031",
+    "uf": "UF5",
+    "pregunta": "En un controlador de recurso, ¿qué hace show()?",
+    "opciones": [
+      "Lista todos los recursos",
+      "Crea la tabla",
+      "Muestra un recurso concreto"
+    ],
+    "correcta": 2,
+    "explicacion": "show muestra la ficha de un recurso."
+  },
+  {
+    "id": "UF5-032",
+    "uf": "UF5",
+    "pregunta": "¿Cómo se define una ruta GET básica?",
+    "opciones": [
+      "Route::get('/ruta', ...);",
+      "Router::page('/ruta', ...);",
+      "Route::select('/ruta', ...);"
+    ],
+    "correcta": 0,
+    "explicacion": "Route::get define rutas GET."
+  },
+  {
+    "id": "UF5-033",
+    "uf": "UF5",
+    "pregunta": "¿Qué significa una ruta con parámetro como /hola/{nombre}?",
+    "opciones": [
+      "Que recibe un valor variable en la URL",
+      "Que solo acepta POST",
+      "Que siempre redirige"
+    ],
+    "correcta": 0,
+    "explicacion": "Las llaves indican parámetro de ruta."
+  },
+  {
+    "id": "UF5-034",
+    "uf": "UF5",
+    "pregunta": "¿Cómo se marca un parámetro opcional en una ruta?",
+    "opciones": [
+      "Con #",
+      "Con !",
+      "Con ?"
+    ],
+    "correcta": 2,
+    "explicacion": "En Laravel se usa {nombre?}."
+  },
+  {
+    "id": "UF5-035",
+    "uf": "UF5",
+    "pregunta": "¿Para qué sirve name() en una ruta?",
+    "opciones": [
+      "Para validar un formulario",
+      "Para dar alias a la ruta",
+      "Para crear una tabla"
+    ],
+    "correcta": 1,
+    "explicacion": "name permite referirse a la ruta por nombre."
+  },
+  {
+    "id": "UF5-036",
+    "uf": "UF5",
+    "pregunta": "¿Qué método permite validar parámetros de ruta con expresiones regulares?",
+    "opciones": [
+      "where()",
+      "validateRoute()",
+      "regex()"
+    ],
+    "correcta": 0,
+    "explicacion": "where aplica condiciones a parámetros."
+  },
+  {
+    "id": "UF5-037",
+    "uf": "UF5",
+    "pregunta": "¿Qué es Blade?",
+    "opciones": [
+      "El ORM de Laravel",
+      "El motor de plantillas de Laravel",
+      "El servidor interno"
+    ],
+    "correcta": 1,
+    "explicacion": "Blade es el sistema de plantillas."
+  },
+  {
+    "id": "UF5-038",
+    "uf": "UF5",
+    "pregunta": "¿Cómo se muestra una variable en Blade?",
+    "opciones": [
+      "<? $variable ?>",
+      "{{ $variable }}",
+      "[[ variable ]]"
+    ],
+    "correcta": 1,
+    "explicacion": "Blade muestra variables con dobles llaves."
+  },
+  {
+    "id": "UF5-039",
+    "uf": "UF5",
+    "pregunta": "¿Con qué símbolo empiezan las directivas de Blade?",
+    "opciones": [
+      "$",
+      "@",
+      "#"
+    ],
+    "correcta": 1,
+    "explicacion": "Las directivas usan @, como @if o @foreach."
+  },
+  {
+    "id": "UF5-040",
+    "uf": "UF5",
+    "pregunta": "¿Qué directiva protege formularios contra CSRF?",
+    "opciones": [
+      "@tokenPost",
+      "@secure",
+      "@csrf"
+    ],
+    "correcta": 2,
+    "explicacion": "@csrf añade el token de seguridad necesario en formularios POST."
+  },
+  {
+    "id": "UF6-001",
+    "uf": "UF6",
+    "pregunta": "¿Qué es Eloquent en Laravel?",
+    "opciones": [
+      "Un motor de vistas",
+      "El ORM de Laravel",
+      "Un servidor web"
+    ],
+    "correcta": 1,
+    "explicacion": "Eloquent es el ORM para interactuar con la base de datos usando modelos."
+  },
+  {
+    "id": "UF6-002",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace un modelo en Laravel?",
+    "opciones": [
+      "Muestra HTML",
+      "Define rutas",
+      "Representa una tabla de la base de datos"
+    ],
+    "correcta": 2,
+    "explicacion": "Un modelo representa una tabla y permite trabajar con sus datos."
+  },
+  {
+    "id": "UF6-003",
+    "uf": "UF6",
+    "pregunta": "¿Qué método obtiene todos los registros de un modelo?",
+    "opciones": [
+      "getAll()",
+      "fetchAll()",
+      "all()"
+    ],
+    "correcta": 2,
+    "explicacion": "Model::all() devuelve todos los registros."
+  },
+  {
+    "id": "UF6-004",
+    "uf": "UF6",
+    "pregunta": "¿Qué método crea un registro usando asignación masiva?",
+    "opciones": [
+      "insert()",
+      "saveAll()",
+      "create()"
+    ],
+    "correcta": 2,
+    "explicacion": "create() inserta un nuevo registro."
+  },
+  {
+    "id": "UF6-005",
+    "uf": "UF6",
+    "pregunta": "¿Qué propiedad permite asignación masiva segura?",
+    "opciones": [
+      "$guardedAll",
+      "$fillable",
+      "$columns"
+    ],
+    "correcta": 1,
+    "explicacion": "$fillable define campos permitidos."
+  },
+  {
+    "id": "UF6-006",
+    "uf": "UF6",
+    "pregunta": "¿Qué comando crea un modelo?",
+    "opciones": [
+      "php artisan make:model",
+      "php artisan model:new",
+      "laravel model create"
+    ],
+    "correcta": 0,
+    "explicacion": "make:model crea modelos."
+  },
+  {
+    "id": "UF6-007",
+    "uf": "UF6",
+    "pregunta": "¿Qué comando crea una migración?",
+    "opciones": [
+      "php artisan new:migration",
+      "laravel migration",
+      "php artisan make:migration"
+    ],
+    "correcta": 2,
+    "explicacion": "make:migration crea migraciones."
+  },
+  {
+    "id": "UF6-008",
+    "uf": "UF6",
+    "pregunta": "¿Qué comando ejecuta migraciones?",
+    "opciones": [
+      "php artisan run:migration",
+      "php migrate",
+      "php artisan migrate"
+    ],
+    "correcta": 2,
+    "explicacion": "migrate aplica cambios a la BD."
+  },
+  {
+    "id": "UF6-009",
+    "uf": "UF6",
+    "pregunta": "¿Qué método define la estructura en una migración?",
+    "opciones": [
+      "down()",
+      "schema()",
+      "up()"
+    ],
+    "correcta": 2,
+    "explicacion": "up() define la creación."
+  },
+  {
+    "id": "UF6-010",
+    "uf": "UF6",
+    "pregunta": "¿Qué método revierte una migración?",
+    "opciones": [
+      "rollback()",
+      "down()",
+      "remove()"
+    ],
+    "correcta": 1,
+    "explicacion": "down() deshace la migración."
+  },
+  {
+    "id": "UF6-011",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace $table->id();?",
+    "opciones": [
+      "Crea clave primaria autoincremental",
+      "Crea índice único",
+      "Crea relación"
+    ],
+    "correcta": 0,
+    "explicacion": "Define campo id."
+  },
+  {
+    "id": "UF6-012",
+    "uf": "UF6",
+    "pregunta": "¿Qué tipo de campo crea $table->string('nombre')?",
+    "opciones": [
+      "DATE",
+      "INT",
+      "VARCHAR"
+    ],
+    "correcta": 2,
+    "explicacion": "string crea varchar."
+  },
+  {
+    "id": "UF6-013",
+    "uf": "UF6",
+    "pregunta": "¿Qué crea $table->timestamps();?",
+    "opciones": [
+      "created_at y updated_at",
+      "id y nombre",
+      "clave primaria"
+    ],
+    "correcta": 0,
+    "explicacion": "timestamps añade fechas."
+  },
+  {
+    "id": "UF6-014",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace find($id)?",
+    "opciones": [
+      "Busca todos",
+      "Inserta",
+      "Busca por clave primaria"
+    ],
+    "correcta": 2,
+    "explicacion": "find busca por id."
+  },
+  {
+    "id": "UF6-015",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace where()?",
+    "opciones": [
+      "Filtra consultas",
+      "Inserta datos",
+      "Elimina tablas"
+    ],
+    "correcta": 0,
+    "explicacion": "where aplica condiciones."
+  },
+  {
+    "id": "UF6-016",
+    "uf": "UF6",
+    "pregunta": "¿Qué devuelve first()?",
+    "opciones": [
+      "Primer resultado",
+      "Nada",
+      "Todos los resultados"
+    ],
+    "correcta": 0,
+    "explicacion": "first obtiene un solo registro."
+  },
+  {
+    "id": "UF6-017",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace save()?",
+    "opciones": [
+      "Elimina registro",
+      "Lee datos",
+      "Guarda cambios en el modelo"
+    ],
+    "correcta": 2,
+    "explicacion": "save persiste cambios."
+  },
+  {
+    "id": "UF6-018",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace delete()?",
+    "opciones": [
+      "Actualiza",
+      "Elimina un registro",
+      "Inserta"
+    ],
+    "correcta": 1,
+    "explicacion": "delete elimina."
+  },
+  {
+    "id": "UF6-019",
+    "uf": "UF6",
+    "pregunta": "¿Qué relación es 1 a 1?",
+    "opciones": [
+      "belongsToMany",
+      "hasMany",
+      "hasOne"
+    ],
+    "correcta": 2,
+    "explicacion": "hasOne es uno a uno."
+  },
+  {
+    "id": "UF6-020",
+    "uf": "UF6",
+    "pregunta": "¿Qué relación es 1 a muchos?",
+    "opciones": [
+      "belongsToMany",
+      "hasOne",
+      "hasMany"
+    ],
+    "correcta": 2,
+    "explicacion": "hasMany es uno a muchos."
+  },
+  {
+    "id": "UF6-021",
+    "uf": "UF6",
+    "pregunta": "¿Qué relación es muchos a muchos?",
+    "opciones": [
+      "belongsToMany",
+      "hasMany",
+      "hasOne"
+    ],
+    "correcta": 0,
+    "explicacion": "belongsToMany define relación N a N."
+  },
+  {
+    "id": "UF6-022",
+    "uf": "UF6",
+    "pregunta": "¿Qué método indica relación inversa?",
+    "opciones": [
+      "connect",
+      "hasMany",
+      "belongsTo"
+    ],
+    "correcta": 2,
+    "explicacion": "belongsTo indica relación inversa."
+  },
+  {
+    "id": "UF6-023",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace with() en consultas?",
+    "opciones": [
+      "Elimina datos",
+      "Carga relaciones",
+      "Crea tablas"
+    ],
+    "correcta": 1,
+    "explicacion": "with carga relaciones (eager loading)."
+  },
+  {
+    "id": "UF6-024",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace paginate()?",
+    "opciones": [
+      "Inserta",
+      "Divide resultados en páginas",
+      "Elimina datos"
+    ],
+    "correcta": 1,
+    "explicacion": "paginate gestiona paginación."
+  },
+  {
+    "id": "UF6-025",
+    "uf": "UF6",
+    "pregunta": "¿Qué es una colección en Laravel?",
+    "opciones": [
+      "Conjunto de resultados",
+      "Un controlador",
+      "Una vista"
+    ],
+    "correcta": 0,
+    "explicacion": "Collection maneja conjuntos de datos."
+  },
+  {
+    "id": "UF6-026",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace pluck()?",
+    "opciones": [
+      "Extrae valores de una columna",
+      "Elimina filas",
+      "Ordena datos"
+    ],
+    "correcta": 0,
+    "explicacion": "pluck devuelve valores de una columna."
+  },
+  {
+    "id": "UF6-027",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace orderBy()?",
+    "opciones": [
+      "Elimina datos",
+      "Ordena resultados",
+      "Crea índices"
+    ],
+    "correcta": 1,
+    "explicacion": "orderBy ordena resultados."
+  },
+  {
+    "id": "UF6-028",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace limit()?",
+    "opciones": [
+      "Elimina datos",
+      "Limita resultados",
+      "Ordena"
+    ],
+    "correcta": 1,
+    "explicacion": "limit limita cantidad."
+  },
+  {
+    "id": "UF6-029",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace count()?",
+    "opciones": [
+      "Inserta datos",
+      "Elimina",
+      "Cuenta registros"
+    ],
+    "correcta": 2,
+    "explicacion": "count devuelve número."
+  },
+  {
+    "id": "UF6-030",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace exists()?",
+    "opciones": [
+      "Actualiza",
+      "Comprueba existencia",
+      "Inserta datos"
+    ],
+    "correcta": 1,
+    "explicacion": "exists devuelve true si hay registros."
+  },
+  {
+    "id": "UF6-031",
+    "uf": "UF6",
+    "pregunta": "¿Qué es una seed?",
+    "opciones": [
+      "Una tabla",
+      "Un controlador",
+      "Datos de prueba"
+    ],
+    "correcta": 2,
+    "explicacion": "Seeder inserta datos iniciales."
+  },
+  {
+    "id": "UF6-032",
+    "uf": "UF6",
+    "pregunta": "¿Qué comando ejecuta seeders?",
+    "opciones": [
+      "php artisan db:seed",
+      "php seed",
+      "php artisan seed"
+    ],
+    "correcta": 0,
+    "explicacion": "db:seed ejecuta seeders."
+  },
+  {
+    "id": "UF6-033",
+    "uf": "UF6",
+    "pregunta": "¿Qué es un factory?",
+    "opciones": [
+      "Generador de datos fake",
+      "Un controlador",
+      "Un modelo"
+    ],
+    "correcta": 0,
+    "explicacion": "Factory genera datos de prueba."
+  },
+  {
+    "id": "UF6-034",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace update()?",
+    "opciones": [
+      "Elimina",
+      "Inserta",
+      "Actualiza registros"
+    ],
+    "correcta": 2,
+    "explicacion": "update modifica datos."
+  },
+  {
+    "id": "UF6-035",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace truncate()?",
+    "opciones": [
+      "Ordena",
+      "Vacía tabla",
+      "Inserta datos"
+    ],
+    "correcta": 1,
+    "explicacion": "truncate elimina todo."
+  },
+  {
+    "id": "UF6-036",
+    "uf": "UF6",
+    "pregunta": "¿Qué es soft delete?",
+    "opciones": [
+      "Borrado lógico",
+      "Borrado físico",
+      "Copia datos"
+    ],
+    "correcta": 0,
+    "explicacion": "Soft delete marca como eliminado."
+  },
+  {
+    "id": "UF6-037",
+    "uf": "UF6",
+    "pregunta": "¿Qué método activa soft delete?",
+    "opciones": [
+      "deleteSoft()",
+      "use SoftDeletes",
+      "soft()"
+    ],
+    "correcta": 1,
+    "explicacion": "Trait SoftDeletes."
+  },
+  {
+    "id": "UF6-038",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace restore()?",
+    "opciones": [
+      "Elimina",
+      "Recupera borrado lógico",
+      "Inserta"
+    ],
+    "correcta": 1,
+    "explicacion": "restore revierte soft delete."
+  },
+  {
+    "id": "UF6-039",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace forceDelete()?",
+    "opciones": [
+      "Restaura",
+      "Elimina definitivamente",
+      "Actualiza"
+    ],
+    "correcta": 1,
+    "explicacion": "forceDelete borra permanentemente."
+  },
+  {
+    "id": "UF6-040",
+    "uf": "UF6",
+    "pregunta": "¿Qué hace eager loading?",
+    "opciones": [
+      "Elimina tablas",
+      "Inserta datos",
+      "Evita múltiples consultas"
+    ],
+    "correcta": 2,
+    "explicacion": "Reduce consultas con relaciones."
+  },
+  {
+    "id": "UF7-001",
+    "uf": "UF7",
+    "pregunta": "¿Qué es una API? ",
+    "opciones": [
+      "Un servidor web",
+      "Un conjunto de reglas para que aplicaciones se comuniquen",
+      "Un lenguaje de programación"
+    ],
+    "correcta": 1,
+    "explicacion": "Una API define cómo interactúan sistemas entre sí."
+  },
+  {
+    "id": "UF7-002",
+    "uf": "UF7",
+    "pregunta": "¿Qué estilo arquitectónico es el más común en APIs web actuales?",
+    "opciones": [
+      "FTP",
+      "SOAP",
+      "REST"
+    ],
+    "correcta": 2,
+    "explicacion": "REST es el estilo más usado en APIs modernas."
+  },
+  {
+    "id": "UF7-003",
+    "uf": "UF7",
+    "pregunta": "¿Qué significa REST?",
+    "opciones": [
+      "Protocolo de correo",
+      "Lenguaje de marcado",
+      "Transferencia de Estado Representacional"
+    ],
+    "correcta": 2,
+    "explicacion": "REST describe un estilo de arquitectura para sistemas distribuidos."
+  },
+  {
+    "id": "UF7-004",
+    "uf": "UF7",
+    "pregunta": "¿Qué método HTTP se usa normalmente para obtener datos?",
+    "opciones": [
+      "POST",
+      "DELETE",
+      "GET"
+    ],
+    "correcta": 2,
+    "explicacion": "GET se usa para recuperar información."
+  },
+  {
+    "id": "UF7-005",
+    "uf": "UF7",
+    "pregunta": "¿Qué método HTTP se usa para crear recursos?",
+    "opciones": [
+      "GET",
+      "POST",
+      "PUT"
+    ],
+    "correcta": 1,
+    "explicacion": "POST crea nuevos recursos."
+  },
+  {
+    "id": "UF7-006",
+    "uf": "UF7",
+    "pregunta": "¿Qué método HTTP se usa para actualizar un recurso completamente?",
+    "opciones": [
+      "PUT",
+      "GET",
+      "POST"
+    ],
+    "correcta": 0,
+    "explicacion": "PUT reemplaza completamente un recurso."
+  },
+  {
+    "id": "UF7-007",
+    "uf": "UF7",
+    "pregunta": "¿Qué método HTTP se usa normalmente para eliminar recursos?",
+    "opciones": [
+      "GET",
+      "POST",
+      "DELETE"
+    ],
+    "correcta": 2,
+    "explicacion": "DELETE elimina recursos."
+  },
+  {
+    "id": "UF7-008",
+    "uf": "UF7",
+    "pregunta": "¿Qué código HTTP indica éxito en una petición?",
+    "opciones": [
+      "404",
+      "500",
+      "200"
+    ],
+    "correcta": 2,
+    "explicacion": "200 OK indica que la petición fue correcta."
+  },
+  {
+    "id": "UF7-009",
+    "uf": "UF7",
+    "pregunta": "¿Qué código HTTP indica que un recurso no se encuentra?",
+    "opciones": [
+      "200",
+      "301",
+      "404"
+    ],
+    "correcta": 2,
+    "explicacion": "404 Not Found indica recurso inexistente."
+  },
+  {
+    "id": "UF7-010",
+    "uf": "UF7",
+    "pregunta": "¿Qué código HTTP indica error del servidor?",
+    "opciones": [
+      "200",
+      "500",
+      "403"
+    ],
+    "correcta": 1,
+    "explicacion": "500 Internal Server Error indica fallo del servidor."
+  },
+  {
+    "id": "UF7-011",
+    "uf": "UF7",
+    "pregunta": "¿Qué código HTTP indica creación correcta de un recurso?",
+    "opciones": [
+      "201",
+      "200",
+      "404"
+    ],
+    "correcta": 0,
+    "explicacion": "201 Created indica que se creó un recurso."
+  },
+  {
+    "id": "UF7-012",
+    "uf": "UF7",
+    "pregunta": "¿Qué código HTTP indica que no hay contenido en la respuesta?",
+    "opciones": [
+      "500",
+      "200",
+      "204"
+    ],
+    "correcta": 2,
+    "explicacion": "204 No Content indica respuesta sin cuerpo."
+  },
+  {
+    "id": "UF7-013",
+    "uf": "UF7",
+    "pregunta": "¿Qué código HTTP indica redirección permanente?",
+    "opciones": [
+      "301",
+      "200",
+      "404"
+    ],
+    "correcta": 0,
+    "explicacion": "301 Moved Permanently es redirección."
+  },
+  {
+    "id": "UF7-014",
+    "uf": "UF7",
+    "pregunta": "¿Qué formato de datos es más usado en APIs modernas?",
+    "opciones": [
+      "XML",
+      "CSV",
+      "JSON"
+    ],
+    "correcta": 2,
+    "explicacion": "JSON es ligero y fácil de usar."
+  },
+  {
+    "id": "UF7-015",
+    "uf": "UF7",
+    "pregunta": "¿Qué función PHP convierte JSON a variable?",
+    "opciones": [
+      "json_decode()",
+      "json_encode()",
+      "parse_json()"
+    ],
+    "correcta": 0,
+    "explicacion": "json_decode convierte JSON a estructura PHP."
+  },
+  {
+    "id": "UF7-016",
+    "uf": "UF7",
+    "pregunta": "¿Qué función PHP convierte datos a JSON?",
+    "opciones": [
+      "json_encode()",
+      "toJSON()",
+      "json_decode()"
+    ],
+    "correcta": 0,
+    "explicacion": "json_encode genera JSON."
+  },
+  {
+    "id": "UF7-017",
+    "uf": "UF7",
+    "pregunta": "¿Qué herramienta se usa para probar APIs?",
+    "opciones": [
+      "phpMyAdmin",
+      "Composer",
+      "Postman"
+    ],
+    "correcta": 2,
+    "explicacion": "Postman permite enviar peticiones HTTP."
+  },
+  {
+    "id": "UF7-018",
+    "uf": "UF7",
+    "pregunta": "¿Qué es un endpoint?",
+    "opciones": [
+      "Un tipo de base de datos",
+      "Una URL de una API",
+      "Un servidor físico"
+    ],
+    "correcta": 1,
+    "explicacion": "Endpoint es la dirección de un recurso."
+  },
+  {
+    "id": "UF7-019",
+    "uf": "UF7",
+    "pregunta": "¿Qué es un token en una API?",
+    "opciones": [
+      "Un método HTTP",
+      "Un tipo de base de datos",
+      "Un identificador para autenticación"
+    ],
+    "correcta": 2,
+    "explicacion": "El token identifica y autoriza al usuario."
+  },
+  {
+    "id": "UF7-020",
+    "uf": "UF7",
+    "pregunta": "¿Dónde se suele enviar el token?",
+    "opciones": [
+      "En CSS",
+      "En el HTML",
+      "En cabeceras HTTP"
+    ],
+    "correcta": 2,
+    "explicacion": "Normalmente en la cabecera Authorization."
+  },
+  {
+    "id": "UF7-021",
+    "uf": "UF7",
+    "pregunta": "¿Qué cabecera suele incluir el token?",
+    "opciones": [
+      "Authorization",
+      "Accept",
+      "Content-Type"
+    ],
+    "correcta": 0,
+    "explicacion": "Authorization contiene el token."
+  },
+  {
+    "id": "UF7-022",
+    "uf": "UF7",
+    "pregunta": "¿Qué tipo de autenticación usa tokens en lugar de sesión?",
+    "opciones": [
+      "Local",
+      "Stateful",
+      "Stateless"
+    ],
+    "correcta": 2,
+    "explicacion": "Las APIs REST suelen ser stateless."
+  },
+  {
+    "id": "UF7-023",
+    "uf": "UF7",
+    "pregunta": "¿Qué significa stateless en APIs?",
+    "opciones": [
+      "Que guarda sesiones",
+      "Que no guarda estado entre peticiones",
+      "Que usa cookies"
+    ],
+    "correcta": 1,
+    "explicacion": "Cada petición es independiente."
+  },
+  {
+    "id": "UF7-024",
+    "uf": "UF7",
+    "pregunta": "¿Qué es SOAP?",
+    "opciones": [
+      "Una base de datos",
+      "Un protocolo más complejo basado en XML",
+      "Un método HTTP"
+    ],
+    "correcta": 1,
+    "explicacion": "SOAP usa XML y es más pesado que REST."
+  },
+  {
+    "id": "UF7-025",
+    "uf": "UF7",
+    "pregunta": "¿Qué ventaja tiene REST sobre SOAP?",
+    "opciones": [
+      "Es más simple y ligero",
+      "Es más lento",
+      "No usa HTTP"
+    ],
+    "correcta": 0,
+    "explicacion": "REST es más fácil de implementar."
+  },
+  {
+    "id": "UF7-026",
+    "uf": "UF7",
+    "pregunta": "¿Qué método HTTP es idempotente?",
+    "opciones": [
+      "PUT",
+      "POST",
+      "PATCH"
+    ],
+    "correcta": 0,
+    "explicacion": "PUT produce el mismo resultado si se repite."
+  },
+  {
+    "id": "UF7-027",
+    "uf": "UF7",
+    "pregunta": "¿Qué significa idempotente?",
+    "opciones": [
+      "Que siempre falla",
+      "Que repetir la petición no cambia el resultado",
+      "Que solo funciona una vez"
+    ],
+    "correcta": 1,
+    "explicacion": "Idempotencia: mismo resultado en múltiples ejecuciones."
+  },
+  {
+    "id": "UF7-028",
+    "uf": "UF7",
+    "pregunta": "¿Qué hace la cabecera Content-Type?",
+    "opciones": [
+      "Define el método HTTP",
+      "Indica el tipo de datos enviados",
+      "Define el puerto"
+    ],
+    "correcta": 1,
+    "explicacion": "Content-Type describe el formato del cuerpo."
+  },
+  {
+    "id": "UF7-029",
+    "uf": "UF7",
+    "pregunta": "¿Qué cabecera indica qué formato acepta el cliente?",
+    "opciones": [
+      "Authorization",
+      "Content-Type",
+      "Accept"
+    ],
+    "correcta": 2,
+    "explicacion": "Accept define formatos aceptados."
+  },
+  {
+    "id": "UF7-030",
+    "uf": "UF7",
+    "pregunta": "¿Qué devuelve una API normalmente?",
+    "opciones": [
+      "Archivos CSS",
+      "Datos estructurados",
+      "HTML completo"
+    ],
+    "correcta": 1,
+    "explicacion": "Las APIs devuelven datos (JSON/XML)."
+  },
+  {
+    "id": "UF8-001",
+    "uf": "UF8",
+    "pregunta": "¿Qué es un mashup?",
+    "opciones": [
+      "Una base de datos distribuida",
+      "Una aplicación que combina datos de varias fuentes",
+      "Un lenguaje de programación"
+    ],
+    "correcta": 1,
+    "explicacion": "Un mashup integra servicios o datos de diferentes APIs."
+  },
+  {
+    "id": "UF8-002",
+    "uf": "UF8",
+    "pregunta": "¿Insertar un vídeo de YouTube en una web es un mashup?",
+    "opciones": [
+      "Solo si usa PHP",
+      "Sí siempre",
+      "No necesariamente"
+    ],
+    "correcta": 2,
+    "explicacion": "Incrustar un vídeo no implica combinar datos de varias fuentes."
+  },
+  {
+    "id": "UF8-003",
+    "uf": "UF8",
+    "pregunta": "¿Qué formato es más ligero y usado en APIs modernas?",
+    "opciones": [
+      "XML",
+      "CSV",
+      "JSON"
+    ],
+    "correcta": 2,
+    "explicacion": "JSON es ligero y fácil de parsear."
+  },
+  {
+    "id": "UF8-004",
+    "uf": "UF8",
+    "pregunta": "¿Qué formato es más antiguo y estructurado con etiquetas?",
+    "opciones": [
+      "JSON",
+      "TXT",
+      "XML"
+    ],
+    "correcta": 2,
+    "explicacion": "XML usa etiquetas jerárquicas."
+  },
+  {
+    "id": "UF8-005",
+    "uf": "UF8",
+    "pregunta": "¿Qué función PHP obtiene contenido de una URL sencilla?",
+    "opciones": [
+      "curl_exec()",
+      "file_get_contents()",
+      "json_decode()"
+    ],
+    "correcta": 1,
+    "explicacion": "file_get_contents puede leer URLs si allow_url_fopen está habilitado."
+  },
+  {
+    "id": "UF8-006",
+    "uf": "UF8",
+    "pregunta": "¿Qué extensión de PHP permite hacer peticiones HTTP más avanzadas?",
+    "opciones": [
+      "cURL",
+      "PDO",
+      "SimpleXML"
+    ],
+    "correcta": 0,
+    "explicacion": "cURL permite peticiones HTTP complejas."
+  },
+  {
+    "id": "UF8-007",
+    "uf": "UF8",
+    "pregunta": "¿Qué hace curl_exec()?",
+    "opciones": [
+      "Convierte JSON",
+      "Lee XML",
+      "Ejecuta una petición cURL"
+    ],
+    "correcta": 2,
+    "explicacion": "curl_exec ejecuta la petición preparada."
+  },
+  {
+    "id": "UF8-008",
+    "uf": "UF8",
+    "pregunta": "¿Qué es OAuth2?",
+    "opciones": [
+      "Un método HTTP",
+      "Un tipo de base de datos",
+      "Un protocolo de autorización"
+    ],
+    "correcta": 2,
+    "explicacion": "OAuth2 permite autorización segura entre aplicaciones."
+  },
+  {
+    "id": "UF8-009",
+    "uf": "UF8",
+    "pregunta": "¿Qué permite OAuth2?",
+    "opciones": [
+      "Enviar correos",
+      "Crear bases de datos",
+      "Acceder a recursos sin compartir credenciales"
+    ],
+    "correcta": 2,
+    "explicacion": "Se usa para delegar acceso de forma segura."
+  },
+  {
+    "id": "UF8-010",
+    "uf": "UF8",
+    "pregunta": "¿Qué es un token en OAuth2?",
+    "opciones": [
+      "Un archivo",
+      "Un identificador de acceso",
+      "Un método HTTP"
+    ],
+    "correcta": 1,
+    "explicacion": "El token autoriza el acceso a recursos."
+  },
+  {
+    "id": "UF8-011",
+    "uf": "UF8",
+    "pregunta": "¿Qué es JWT?",
+    "opciones": [
+      "Un token con información codificada",
+      "Una base de datos",
+      "Un servidor"
+    ],
+    "correcta": 0,
+    "explicacion": "JSON Web Token contiene datos codificados y firmados."
+  },
+  {
+    "id": "UF8-012",
+    "uf": "UF8",
+    "pregunta": "¿Qué ventaja tiene JWT?",
+    "opciones": [
+      "No usa HTTP",
+      "Es más lento",
+      "No necesita sesión en servidor"
+    ],
+    "correcta": 2,
+    "explicacion": "Permite autenticación stateless."
+  },
+  {
+    "id": "UF8-013",
+    "uf": "UF8",
+    "pregunta": "¿Qué es RSS?",
+    "opciones": [
+      "Un formato para distribuir contenidos",
+      "Una base de datos",
+      "Un lenguaje"
+    ],
+    "correcta": 0,
+    "explicacion": "RSS permite sindicación de contenidos."
+  },
+  {
+    "id": "UF8-014",
+    "uf": "UF8",
+    "pregunta": "¿Qué etiqueta principal tiene RSS?",
+    "opciones": [
+      "<json>",
+      "<feed>",
+      "<rss>"
+    ],
+    "correcta": 2,
+    "explicacion": "RSS se define con la etiqueta <rss>."
+  },
+  {
+    "id": "UF8-015",
+    "uf": "UF8",
+    "pregunta": "¿Qué contiene <channel> en RSS?",
+    "opciones": [
+      "Información del canal",
+      "Datos del servidor",
+      "Código PHP"
+    ],
+    "correcta": 0,
+    "explicacion": "<channel> describe el feed."
+  },
+  {
+    "id": "UF8-016",
+    "uf": "UF8",
+    "pregunta": "¿Qué contiene <item> en RSS?",
+    "opciones": [
+      "Cada noticia o entrada",
+      "Usuarios",
+      "Configuración"
+    ],
+    "correcta": 0,
+    "explicacion": "<item> representa cada elemento del feed."
+  },
+  {
+    "id": "UF8-017",
+    "uf": "UF8",
+    "pregunta": "¿Qué significa API RESTful?",
+    "opciones": [
+      "API sin servidor",
+      "API con SOAP",
+      "API que sigue principios REST"
+    ],
+    "correcta": 2,
+    "explicacion": "RESTful cumple reglas REST."
+  },
+  {
+    "id": "UF8-018",
+    "uf": "UF8",
+    "pregunta": "¿Qué método HTTP se usa normalmente para APIs REST?",
+    "opciones": [
+      "Solo POST",
+      "Todos los métodos HTTP",
+      "Solo GET"
+    ],
+    "correcta": 1,
+    "explicacion": "REST usa GET, POST, PUT, DELETE, etc."
+  },
+  {
+    "id": "UF8-019",
+    "uf": "UF8",
+    "pregunta": "¿Qué es un recurso en una API?",
+    "opciones": [
+      "Un archivo CSS",
+      "Un servidor físico",
+      "Una entidad accesible por URL"
+    ],
+    "correcta": 2,
+    "explicacion": "Un recurso es cualquier entidad expuesta por la API."
+  },
+  {
+    "id": "UF8-020",
+    "uf": "UF8",
+    "pregunta": "¿Qué devuelve una API REST normalmente?",
+    "opciones": [
+      "Imágenes",
+      "HTML completo",
+      "Datos estructurados"
+    ],
+    "correcta": 2,
+    "explicacion": "Las APIs devuelven datos, no páginas completas."
+  },
+  {
+    "id": "UF8-021",
+    "uf": "UF8",
+    "pregunta": "¿Qué hace json_decode($json, true)?",
+    "opciones": [
+      "Convierte JSON a array",
+      "Borra datos",
+      "Convierte a XML"
+    ],
+    "correcta": 0,
+    "explicacion": "El true devuelve array asociativo."
+  },
+  {
+    "id": "UF8-022",
+    "uf": "UF8",
+    "pregunta": "¿Qué hace json_encode()?",
+    "opciones": [
+      "Borra datos",
+      "Lee JSON",
+      "Convierte datos a JSON"
+    ],
+    "correcta": 2,
+    "explicacion": "Convierte estructuras PHP a JSON."
+  },
+  {
+    "id": "UF8-023",
+    "uf": "UF8",
+    "pregunta": "¿Qué significa stateless en APIs?",
+    "opciones": [
+      "Con sesiones",
+      "Sin estado entre peticiones",
+      "Con cookies"
+    ],
+    "correcta": 1,
+    "explicacion": "Cada petición es independiente."
+  },
+  {
+    "id": "UF8-024",
+    "uf": "UF8",
+    "pregunta": "¿Qué cabecera se usa para indicar tipo JSON?",
+    "opciones": [
+      "Auth: token",
+      "Content-Type: application/json",
+      "Accept: html"
+    ],
+    "correcta": 1,
+    "explicacion": "Indica que el cuerpo es JSON."
+  },
+  {
+    "id": "UF8-025",
+    "uf": "UF8",
+    "pregunta": "¿Qué cabecera indica formato aceptado?",
+    "opciones": [
+      "Accept",
+      "Authorization",
+      "Content-Type"
+    ],
+    "correcta": 0,
+    "explicacion": "Accept indica qué formato espera el cliente."
+  },
+  {
+    "id": "UF8-026",
+    "uf": "UF8",
+    "pregunta": "¿Qué es una API pública?",
+    "opciones": [
+      "Accesible sin autenticación estricta",
+      "Solo para admins",
+      "Sin URL"
+    ],
+    "correcta": 0,
+    "explicacion": "APIs públicas permiten acceso abierto."
+  },
+  {
+    "id": "UF8-027",
+    "uf": "UF8",
+    "pregunta": "¿Qué es una API privada?",
+    "opciones": [
+      "No usa HTTP",
+      "Requiere autenticación",
+      "No tiene datos"
+    ],
+    "correcta": 1,
+    "explicacion": "APIs privadas requieren credenciales."
+  },
+  {
+    "id": "UF8-028",
+    "uf": "UF8",
+    "pregunta": "¿Qué es una API key?",
+    "opciones": [
+      "Archivo JSON",
+      "Clave de acceso a API",
+      "Servidor"
+    ],
+    "correcta": 1,
+    "explicacion": "Se usa para identificar clientes."
+  },
+  {
+    "id": "UF8-029",
+    "uf": "UF8",
+    "pregunta": "¿Qué ventaja tiene usar APIs externas?",
+    "opciones": [
+      "Eliminar seguridad",
+      "No usar servidor",
+      "Reutilizar servicios sin desarrollarlos"
+    ],
+    "correcta": 2,
+    "explicacion": "Permite integrar servicios existentes."
+  },
+  {
+    "id": "UF8-030",
+    "uf": "UF8",
+    "pregunta": "¿Qué problema puede tener depender de APIs externas?",
+    "opciones": [
+      "Menos código",
+      "Dependencia de terceros",
+      "Mayor velocidad siempre"
+    ],
+    "correcta": 1,
+    "explicacion": "Si falla la API externa, tu app falla."
+  },
+  {
+    "id": "UF9-001",
+    "uf": "UF9",
+    "pregunta": "¿Qué es la computación en la nube (cloud computing)?",
+    "opciones": [
+      "Uso exclusivo de servidores locales",
+      "Uso de recursos informáticos a través de Internet",
+      "Un lenguaje de programación"
+    ],
+    "correcta": 1,
+    "explicacion": "Cloud computing permite usar servicios remotos."
+  },
+  {
+    "id": "UF9-002",
+    "uf": "UF9",
+    "pregunta": "¿Qué es IaaS?",
+    "opciones": [
+      "Interfaz de acceso servidor",
+      "Internet avanzado seguro",
+      "Infraestructura como servicio"
+    ],
+    "correcta": 2,
+    "explicacion": "IaaS proporciona infraestructura virtual."
+  },
+  {
+    "id": "UF9-003",
+    "uf": "UF9",
+    "pregunta": "¿Qué es PaaS?",
+    "opciones": [
+      "Programa avanzado seguro",
+      "Proceso automático de sistema",
+      "Plataforma como servicio"
+    ],
+    "correcta": 2,
+    "explicacion": "PaaS ofrece entorno para desarrollo."
+  },
+  {
+    "id": "UF9-004",
+    "uf": "UF9",
+    "pregunta": "¿Qué es SaaS?",
+    "opciones": [
+      "Servidor avanzado seguro",
+      "Sistema automático de seguridad",
+      "Software como servicio"
+    ],
+    "correcta": 2,
+    "explicacion": "SaaS ofrece software accesible online."
+  },
+  {
+    "id": "UF9-005",
+    "uf": "UF9",
+    "pregunta": "¿Qué ventaja tiene la nube?",
+    "opciones": [
+      "Mayor complejidad siempre",
+      "Escalabilidad",
+      "Menor acceso"
+    ],
+    "correcta": 1,
+    "explicacion": "Permite crecer fácilmente."
+  },
+  {
+    "id": "UF9-006",
+    "uf": "UF9",
+    "pregunta": "¿Qué desventaja puede tener la nube?",
+    "opciones": [
+      "Dependencia de Internet",
+      "Mayor velocidad siempre",
+      "Menos seguridad siempre"
+    ],
+    "correcta": 0,
+    "explicacion": "Requiere conexión estable."
+  },
+  {
+    "id": "UF9-007",
+    "uf": "UF9",
+    "pregunta": "¿Qué es una aplicación híbrida?",
+    "opciones": [
+      "Solo web",
+      "Solo escritorio",
+      "Combina web y nativa"
+    ],
+    "correcta": 2,
+    "explicacion": "Híbrida mezcla tecnologías."
+  },
+  {
+    "id": "UF9-008",
+    "uf": "UF9",
+    "pregunta": "¿Qué es una app nativa?",
+    "opciones": [
+      "Siempre web",
+      "Solo servidor",
+      "Desarrollada para un sistema específico"
+    ],
+    "correcta": 2,
+    "explicacion": "Nativa funciona en sistema concreto."
+  },
+  {
+    "id": "UF9-009",
+    "uf": "UF9",
+    "pregunta": "¿Qué es una app web?",
+    "opciones": [
+      "Se instala siempre",
+      "No usa servidor",
+      "Se ejecuta en navegador"
+    ],
+    "correcta": 2,
+    "explicacion": "Apps web funcionan en navegador."
+  },
+  {
+    "id": "UF9-010",
+    "uf": "UF9",
+    "pregunta": "¿Qué es una Progressive Web App (PWA)?",
+    "opciones": [
+      "App solo offline",
+      "App web con características de app nativa",
+      "App de escritorio"
+    ],
+    "correcta": 1,
+    "explicacion": "PWA combina ventajas web y móvil."
+  },
+  {
+    "id": "UF9-011",
+    "uf": "UF9",
+    "pregunta": "¿Qué permite un Service Worker?",
+    "opciones": [
+      "Funcionamiento offline",
+      "Crear base de datos",
+      "Ejecutar PHP"
+    ],
+    "correcta": 0,
+    "explicacion": "Service Worker controla caché."
+  },
+  {
+    "id": "UF9-012",
+    "uf": "UF9",
+    "pregunta": "¿Qué es caché?",
+    "opciones": [
+      "Servidor web",
+      "Base de datos",
+      "Almacenamiento temporal"
+    ],
+    "correcta": 2,
+    "explicacion": "Caché mejora rendimiento."
+  },
+  {
+    "id": "UF9-013",
+    "uf": "UF9",
+    "pregunta": "¿Qué es CDN?",
+    "opciones": [
+      "Red de distribución de contenido",
+      "Base de datos cloud",
+      "Lenguaje web"
+    ],
+    "correcta": 0,
+    "explicacion": "CDN distribuye contenido globalmente."
+  },
+  {
+    "id": "UF9-014",
+    "uf": "UF9",
+    "pregunta": "¿Qué mejora un CDN?",
+    "opciones": [
+      "Seguridad de PHP",
+      "Ejecución de SQL",
+      "Velocidad de carga"
+    ],
+    "correcta": 2,
+    "explicacion": "Reduce latencia."
+  },
+  {
+    "id": "UF9-015",
+    "uf": "UF9",
+    "pregunta": "¿Qué es hosting?",
+    "opciones": [
+      "Servicio para alojar webs",
+      "Lenguaje",
+      "Base de datos"
+    ],
+    "correcta": 0,
+    "explicacion": "Hosting publica sitios web."
+  },
+  {
+    "id": "UF9-016",
+    "uf": "UF9",
+    "pregunta": "¿Qué es dominio?",
+    "opciones": [
+      "Nombre de la web",
+      "Archivo",
+      "Servidor físico"
+    ],
+    "correcta": 0,
+    "explicacion": "Dominio identifica la web."
+  },
+  {
+    "id": "UF9-017",
+    "uf": "UF9",
+    "pregunta": "¿Qué es HTTPS?",
+    "opciones": [
+      "Lenguaje",
+      "Servidor",
+      "HTTP seguro"
+    ],
+    "correcta": 2,
+    "explicacion": "HTTPS cifra datos."
+  },
+  {
+    "id": "UF9-018",
+    "uf": "UF9",
+    "pregunta": "¿Qué usa HTTPS para seguridad?",
+    "opciones": [
+      "DNS",
+      "SSL/TLS",
+      "FTP"
+    ],
+    "correcta": 1,
+    "explicacion": "SSL/TLS cifra comunicaciones."
+  },
+  {
+    "id": "UF9-019",
+    "uf": "UF9",
+    "pregunta": "¿Qué es un certificado SSL?",
+    "opciones": [
+      "Base de datos",
+      "Archivo PHP",
+      "Certificado de seguridad"
+    ],
+    "correcta": 2,
+    "explicacion": "Valida identidad y cifra."
+  },
+  {
+    "id": "UF9-020",
+    "uf": "UF9",
+    "pregunta": "¿Qué es un firewall?",
+    "opciones": [
+      "Lenguaje",
+      "Base de datos",
+      "Sistema de protección de red"
+    ],
+    "correcta": 2,
+    "explicacion": "Filtra tráfico."
+  },
+  {
+    "id": "UF9-021",
+    "uf": "UF9",
+    "pregunta": "¿Qué es DevOps?",
+    "opciones": [
+      "Integración de desarrollo y operaciones",
+      "Base de datos",
+      "Lenguaje"
+    ],
+    "correcta": 0,
+    "explicacion": "DevOps mejora despliegue."
+  },
+  {
+    "id": "UF9-022",
+    "uf": "UF9",
+    "pregunta": "¿Qué es CI/CD?",
+    "opciones": [
+      "Servidor",
+      "Lenguaje",
+      "Integración y despliegue continuo"
+    ],
+    "correcta": 2,
+    "explicacion": "Automatiza desarrollo."
+  },
+  {
+    "id": "UF9-023",
+    "uf": "UF9",
+    "pregunta": "¿Qué es Docker?",
+    "opciones": [
+      "Servidor web",
+      "Contenedores para aplicaciones",
+      "Lenguaje"
+    ],
+    "correcta": 1,
+    "explicacion": "Docker empaqueta apps."
+  },
+  {
+    "id": "UF9-024",
+    "uf": "UF9",
+    "pregunta": "¿Qué es un contenedor?",
+    "opciones": [
+      "Archivo",
+      "Entorno aislado",
+      "Base de datos"
+    ],
+    "correcta": 1,
+    "explicacion": "Aísla aplicaciones."
+  },
+  {
+    "id": "UF9-025",
+    "uf": "UF9",
+    "pregunta": "¿Qué es virtualización?",
+    "opciones": [
+      "Simulación de sistemas",
+      "Lenguaje",
+      "Base de datos"
+    ],
+    "correcta": 0,
+    "explicacion": "Permite múltiples sistemas."
+  },
+  {
+    "id": "UF9-026",
+    "uf": "UF9",
+    "pregunta": "¿Qué es escalabilidad?",
+    "opciones": [
+      "Capacidad de crecer",
+      "Eliminar datos",
+      "Reducir código"
+    ],
+    "correcta": 0,
+    "explicacion": "Escalar recursos."
+  },
+  {
+    "id": "UF9-027",
+    "uf": "UF9",
+    "pregunta": "¿Qué es latencia?",
+    "opciones": [
+      "Capacidad de memoria",
+      "Tiempo de respuesta",
+      "Velocidad CPU"
+    ],
+    "correcta": 1,
+    "explicacion": "Latencia mide retraso."
+  },
+  {
+    "id": "UF9-028",
+    "uf": "UF9",
+    "pregunta": "¿Qué es uptime?",
+    "opciones": [
+      "Tiempo de error",
+      "Tiempo activo del sistema",
+      "Tiempo de carga"
+    ],
+    "correcta": 1,
+    "explicacion": "Uptime mide disponibilidad."
+  },
+  {
+    "id": "UF9-029",
+    "uf": "UF9",
+    "pregunta": "¿Qué es balanceo de carga?",
+    "opciones": [
+      "Eliminar datos",
+      "Crear BD",
+      "Distribuir tráfico"
+    ],
+    "correcta": 2,
+    "explicacion": "Balanceo reparte peticiones."
+  },
+  {
+    "id": "UF9-030",
+    "uf": "UF9",
+    "pregunta": "¿Qué es redundancia?",
+    "opciones": [
+      "Reducir memoria",
+      "Duplicación para seguridad",
+      "Eliminar datos"
+    ],
+    "correcta": 1,
+    "explicacion": "Redundancia mejora disponibilidad."
+  }
+]
