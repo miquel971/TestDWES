@@ -82,9 +82,7 @@ btnNuevo.addEventListener("click", () => mostrarPantalla("inicio"));
 btnRepetirFalladas.addEventListener("click", repetirFalladas);
 
 function empezarTest() {
-  const ufsSeleccionadas = Array.from(
-    selectorUF.querySelectorAll("input:checked")
-  ).map(input => input.value);
+  const filtradas = bancoPreguntas;
 
   const numPreguntas = parseInt(
     document.getElementById("numPreguntas").value,
