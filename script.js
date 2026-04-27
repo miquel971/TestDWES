@@ -33,6 +33,10 @@ async function iniciar() {
   await cargarPreguntas();
 }
 
+function actualizarContador() {
+  estadoCarga.textContent = `Quedan ${bancoRestante.length} preguntas.`;
+}
+
 async function cargarPreguntas() {
   try {
     const res = await fetch("./preguntas.json");
@@ -47,7 +51,7 @@ async function cargarPreguntas() {
       localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
     }
 
-    estadoCarga.textContent = `Quedan ${bancoRestante.length} preguntas.`;
+    actualizarContador();
     btnEmpezar.disabled = false;
 
   } catch (error) {
@@ -57,7 +61,12 @@ async function cargarPreguntas() {
 }
 
 btnEmpezar.addEventListener("click", empezarTest);
-btnNuevo.addEventListener("click", () => mostrarPantalla("inicio"));
+
+btnNuevo.addEventListener("click", () => {
+  actualizarContador();
+  mostrarPantalla("inicio");
+});
+
 btnRepetirFalladas.addEventListener("click", repetirFalladas);
 
 function empezarTest() {
@@ -181,13 +190,13 @@ function terminarTest() {
   let nota = aciertos * valorAcierto - fallos * valorFallo;
   if (nota < 0) nota = 0;
 
-  // 🔥 eliminar preguntas usadas
+  // 🔥 eliminar usadas
   const idsUsadas = preguntasTest.map(p => p.id);
   bancoRestante = bancoRestante.filter(p => !idsUsadas.includes(p.id));
 
   localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
 
-  estadoCarga.textContent = `Quedan ${bancoRestante.length} preguntas.`;
+  actualizarContador();
 
   resumen.innerHTML = `
     <div><strong>Aciertos:</strong> ${aciertos}</div>
