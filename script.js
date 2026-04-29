@@ -8,6 +8,7 @@ let fallos = 0;
 let blancas = 0;
 let falladas = [];
 let respondida = false;
+let todasLasPreguntas = [];
 
 const pantallaInicio = document.getElementById("pantallaInicio");
 const pantallaQuiz = document.getElementById("pantallaQuiz");
@@ -17,6 +18,7 @@ const estadoCarga = document.getElementById("estadoCarga");
 const btnEmpezar = document.getElementById("btnEmpezar");
 const btnNuevo = document.getElementById("btnNuevo");
 const btnRepetirFalladas = document.getElementById("btnRepetirFalladas");
+const btnTerminar = document.getElementById("btnTerminar");
 
 const contador = document.getElementById("contador");
 const pregunta = document.getElementById("pregunta");
@@ -30,250 +32,251 @@ btnEmpezar.disabled = true;
 iniciar();
 
 async function iniciar() {
-  await cargarPreguntas();
+    await cargarPreguntas();
 }
 
 function actualizarContador() {
-  estadoCarga.textContent = `Quedan ${bancoRestante.length} preguntas.`;
+    estadoCarga.textContent = `Quedan ${bancoRestante.length} preguntas.`;
 }
 
 async function cargarPreguntas() {
-  try {
-    const res = await fetch("./preguntas.json");
-    const data = await res.json();
+    try {
+        const res = await fetch("./preguntas.json");
+        const data = await res.json();
 
-    const guardado = localStorage.getItem("bancoRestante");
+        todasLasPreguntas = data;
 
-    if (guardado) {
-      bancoRestante = JSON.parse(guardado);
+        const guardado = localStorage.getItem("bancoRestante");
 
-      // 🔥 si está vacío, lo regeneramos automáticamente
-      if (bancoRestante.length === 0) {
-        bancoRestante = data;
-        localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
-      }
+        if (guardado) {
+            bancoRestante = JSON.parse(guardado);
 
-    } else {
-      bancoRestante = data;
-      localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+            if (bancoRestante.length === 0) {
+                bancoRestante = data;
+                localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+            }
+        } else {
+            bancoRestante = data;
+            localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+        }
+
+        actualizarContador();
+        btnEmpezar.disabled = false;
+
+    } catch (error) {
+        estadoCarga.textContent = "Error cargando preguntas.";
+        console.error(error);
     }
-
-    actualizarContador();
-    btnEmpezar.disabled = false;
-
-  } catch (error) {
-    estadoCarga.textContent = "Error cargando preguntas.";
-    console.error(error);
-  }
 }
 
 btnEmpezar.addEventListener("click", empezarTest);
 
 btnNuevo.addEventListener("click", () => {
-  actualizarContador();
-  mostrarPantalla("inicio");
+    actualizarContador();
+    mostrarPantalla("inicio");
 });
 
 btnRepetirFalladas.addEventListener("click", repetirFalladas);
+btnTerminar.addEventListener("click", terminarTest);
 
 function empezarTest() {
-  const numPreguntas = parseInt(document.getElementById("numPreguntas").value, 10);
+    const numPreguntas = parseInt(document.getElementById("numPreguntas").value, 10);
 
-  // 🔥 si se han acabado, reset automático
-  if (bancoRestante.length === 0) {
-    localStorage.removeItem("bancoRestante");
-    alert("Has terminado todas. Se reinicia el banco 🔥");
-    location.reload();
-    return;
-  }
+    if (bancoRestante.length === 0) {
+        bancoRestante = todasLasPreguntas;
+        localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+        actualizarContador();
+    }
 
-  preguntasTest = mezclar(bancoRestante).slice(
-    0,
-    Math.min(numPreguntas, bancoRestante.length)
-  );
+    preguntasTest = mezclar(bancoRestante).slice(
+        0,
+        Math.min(numPreguntas, bancoRestante.length)
+    );
 
-  reiniciarEstado();
-  mostrarPantalla("quiz");
-  pintarPregunta();
+    reiniciarEstado();
+    mostrarPantalla("quiz");
+    pintarPregunta();
 }
 
 function repetirFalladas() {
-  if (falladas.length === 0) {
-    alert("No hay falladas");
-    return;
-  }
+    if (falladas.length === 0) {
+        alert("No hay falladas");
+        return;
+    }
 
-  preguntasTest = mezclar(falladas);
+    preguntasTest = mezclar(falladas);
 
-  reiniciarEstado(false);
-  mostrarPantalla("quiz");
-  pintarPregunta();
+    reiniciarEstado(false);
+    mostrarPantalla("quiz");
+    pintarPregunta();
 }
 
 function reiniciarEstado(limpiarFalladas = true) {
-  preguntaActual = 0;
-  aciertos = 0;
-  fallos = 0;
-  blancas = 0;
-  respondida = false;
+    preguntaActual = 0;
+    aciertos = 0;
+    fallos = 0;
+    blancas = 0;
+    respondida = false;
 
-  if (limpiarFalladas) {
-    falladas = [];
-  }
+    if (limpiarFalladas) {
+        falladas = [];
+    }
 }
 
 function pintarPregunta() {
-  respondida = false;
-  feedback.textContent = "";
+    respondida = false;
+    feedback.textContent = "";
 
-  const p = preguntasTest[preguntaActual];
+    const p = preguntasTest[preguntaActual];
 
-  contador.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
-  pregunta.textContent = p.pregunta;
-  opciones.innerHTML = "";
+    contador.textContent = `Pregunta ${preguntaActual + 1} de ${preguntasTest.length}`;
+    pregunta.textContent = p.pregunta;
 
-  const opcionesMezcladas = mezclarOpciones(p);
+    opciones.innerHTML = "";
 
-  opcionesMezcladas.forEach((opcion, index) => {
-    const btn = document.createElement("button");
+    const opcionesMezcladas = mezclarOpciones(p);
 
-    btn.className = "respuesta";
-    btn.textContent = `${String.fromCharCode(97 + index)}) ${opcion.texto}`;
+    opcionesMezcladas.forEach((opcion, index) => {
+        const btn = document.createElement("button");
+        btn.className = "respuesta";
+        btn.textContent = `${String.fromCharCode(97 + index)}) ${opcion.texto}`;
 
-    btn.addEventListener("click", () => {
-      responder(btn, opcion.correcta, p);
+        btn.addEventListener("click", () => {
+            responder(btn, opcion.correcta, p);
+        });
+
+        opciones.appendChild(btn);
     });
-
-    opciones.appendChild(btn);
-  });
 }
 
 function responder(boton, esCorrecta, preguntaOriginal) {
-  if (respondida) return;
+    if (respondida) return;
 
-  respondida = true;
+    respondida = true;
 
-  const botones = opciones.querySelectorAll(".respuesta");
-  botones.forEach(btn => btn.disabled = true);
+    const botones = opciones.querySelectorAll(".respuesta");
+    botones.forEach(btn => btn.disabled = true);
 
-  if (esCorrecta) {
-    aciertos++;
-    boton.classList.add("correcta");
-    feedback.textContent = "Correcta";
-  } else {
-    fallos++;
-    falladas.push(preguntaOriginal);
-    boton.classList.add("incorrecta");
+    if (esCorrecta) {
+        aciertos++;
+        boton.classList.add("correcta");
+        feedback.textContent = "Correcta";
+    } else {
+        fallos++;
+        falladas.push(preguntaOriginal);
+        boton.classList.add("incorrecta");
+        feedback.textContent = `Incorrecta. ${preguntaOriginal.explicacion}`;
 
-    feedback.textContent = `Incorrecta. ${preguntaOriginal.explicacion}`;
+        botones.forEach(btn => {
+            const texto = btn.textContent.replace(/^.\)\s/, "");
+            const correcta = preguntaOriginal.opciones[preguntaOriginal.correcta];
 
-    botones.forEach(btn => {
-      const texto = btn.textContent.replace(/^.\)\s/, "");
-      const correcta = preguntaOriginal.opciones[preguntaOriginal.correcta];
+            if (texto === correcta) {
+                btn.classList.add("correcta");
+            }
+        });
+    }
 
-      if (texto === correcta) {
-        btn.classList.add("correcta");
-      }
-    });
-  }
-
-  setTimeout(siguientePregunta, 600);
+    setTimeout(siguientePregunta, 600);
 }
 
 function siguientePregunta() {
-  preguntaActual++;
+    preguntaActual++;
 
-  if (preguntaActual >= preguntasTest.length) {
-    terminarTest();
-  } else {
-    pintarPregunta();
-  }
+    if (preguntaActual >= preguntasTest.length) {
+        terminarTest();
+    } else {
+        pintarPregunta();
+    }
 }
 
 function terminarTest() {
-  const total = preguntasTest.length;
-  blancas = total - aciertos - fallos;
+    const total = preguntasTest.length;
 
-  const valorAcierto = 4 / total;
-  const valorFallo = valorAcierto / 3;
+    blancas = total - aciertos - fallos;
 
-  let nota = aciertos * valorAcierto - fallos * valorFallo;
-  if (nota < 0) nota = 0;
+    const valorAcierto = 4 / total;
+    const valorFallo = valorAcierto / 3;
 
-  // 🔥 eliminar usadas
-  const idsUsadas = preguntasTest.map(p => p.id);
-  bancoRestante = bancoRestante.filter(p => !idsUsadas.includes(p.id));
+    let nota = aciertos * valorAcierto - fallos * valorFallo;
+    if (nota < 0) nota = 0;
 
-  localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+    const idsUsadas = preguntasTest.map(p => p.id);
 
-  actualizarContador();
+    bancoRestante = bancoRestante.filter(p => !idsUsadas.includes(p.id));
 
-  resumen.innerHTML = `
-    <div><strong>Aciertos:</strong> ${aciertos}</div>
-    <div><strong>Fallos:</strong> ${fallos}</div>
-    <div><strong>En blanco:</strong> ${blancas}</div>
-    <div><strong>Nota sobre 4:</strong> ${nota.toFixed(2)}</div>
-  `;
+    if (bancoRestante.length === 0) {
+        bancoRestante = todasLasPreguntas;
+    }
 
-  pintarFalladas();
-  mostrarPantalla("resultado");
+    localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+
+    actualizarContador();
+
+    resumen.innerHTML = `
+        <div><strong>Aciertos:</strong> ${aciertos}</div>
+        <div><strong>Fallos:</strong> ${fallos}</div>
+        <div><strong>En blanco:</strong> ${blancas}</div>
+        <div><strong>Nota sobre 4:</strong> ${nota.toFixed(2)}</div>
+    `;
+
+    pintarFalladas();
+    mostrarPantalla("resultado");
 }
 
 function pintarFalladas() {
-  falladasDiv.innerHTML = "";
+    falladasDiv.innerHTML = "";
 
-  if (falladas.length === 0) {
-    falladasDiv.innerHTML = "<p>Todo correcto 🔥</p>";
-    return;
-  }
+    if (falladas.length === 0) {
+        falladasDiv.innerHTML = "<p>Todo correcto 🔥</p>";
+        return;
+    }
 
-  falladas.forEach(p => {
-    const div = document.createElement("div");
+    falladas.forEach(p => {
+        const div = document.createElement("div");
+        div.className = "fallada";
 
-    div.className = "fallada";
+        div.innerHTML = `
+            <strong>${p.pregunta}</strong>
+            <div>Correcta: ${p.opciones[p.correcta]}</div>
+            <div>${p.explicacion}</div>
+        `;
 
-    div.innerHTML = `
-      <strong>${p.pregunta}</strong>
-      <div>Correcta: ${p.opciones[p.correcta]}</div>
-      <div>${p.explicacion}</div>
-    `;
-
-    falladasDiv.appendChild(div);
-  });
+        falladasDiv.appendChild(div);
+    });
 }
 
 function mezclarOpciones(pregunta) {
-  return mezclar(
-    pregunta.opciones.map((texto, index) => ({
-      texto,
-      correcta: index === pregunta.correcta
-    }))
-  );
+    return mezclar(
+        pregunta.opciones.map((texto, index) => ({
+            texto,
+            correcta: index === pregunta.correcta
+        }))
+    );
 }
 
 function mezclar(array) {
-  const copia = [...array];
+    const copia = [...array];
 
-  for (let i = copia.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copia[i], copia[j]] = [copia[j], copia[i]];
-  }
+    for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
 
-  return copia;
+    return copia;
 }
 
 function mostrarPantalla(nombre) {
-  pantallaInicio.classList.add("oculto");
-  pantallaQuiz.classList.add("oculto");
-  pantallaResultado.classList.add("oculto");
+    pantallaInicio.classList.add("oculto");
+    pantallaQuiz.classList.add("oculto");
+    pantallaResultado.classList.add("oculto");
 
-  if (nombre === "inicio") pantallaInicio.classList.remove("oculto");
-  if (nombre === "quiz") pantallaQuiz.classList.remove("oculto");
-  if (nombre === "resultado") pantallaResultado.classList.remove("oculto");
+    if (nombre === "inicio") pantallaInicio.classList.remove("oculto");
+    if (nombre === "quiz") pantallaQuiz.classList.remove("oculto");
+    if (nombre === "resultado") pantallaResultado.classList.remove("oculto");
 }
 
-// 🔥 reset manual opcional
 function resetearBanco() {
-  localStorage.removeItem("bancoRestante");
-  location.reload();
+    localStorage.removeItem("bancoRestante");
+    location.reload();
 }
