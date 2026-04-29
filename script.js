@@ -46,6 +46,13 @@ async function cargarPreguntas() {
 
     if (guardado) {
       bancoRestante = JSON.parse(guardado);
+
+      // 🔥 si está vacío, lo regeneramos automáticamente
+      if (bancoRestante.length === 0) {
+        bancoRestante = data;
+        localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
+      }
+
     } else {
       bancoRestante = data;
       localStorage.setItem("bancoRestante", JSON.stringify(bancoRestante));
@@ -72,8 +79,11 @@ btnRepetirFalladas.addEventListener("click", repetirFalladas);
 function empezarTest() {
   const numPreguntas = parseInt(document.getElementById("numPreguntas").value, 10);
 
+  // 🔥 si se han acabado, reset automático
   if (bancoRestante.length === 0) {
-    alert("Ya has hecho todas las preguntas 🔥");
+    localStorage.removeItem("bancoRestante");
+    alert("Has terminado todas. Se reinicia el banco 🔥");
+    location.reload();
     return;
   }
 
@@ -262,7 +272,7 @@ function mostrarPantalla(nombre) {
   if (nombre === "resultado") pantallaResultado.classList.remove("oculto");
 }
 
-// 🔥 RESET opcional
+// 🔥 reset manual opcional
 function resetearBanco() {
   localStorage.removeItem("bancoRestante");
   location.reload();
